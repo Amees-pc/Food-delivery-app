@@ -107,7 +107,7 @@ const RestaurauntList = () => {
      <div className='p-4'>
        <div className='flex pb-2 '><div className='font-semibold text-xl '>Arabian Chillies</div></div>
       <div> <div className="ml-4 h-5 bg-green-900 w-10 rounded-md flex items-center justify-center  text-sm text-white" >4.5</div></div>
-      <div className='text-gray-500 pt-2'>Arabian food, Shawarma,Fala fal</div>
+      <div className='text-gray-500 pt-2'>Arabian food, Shawarma,Fala-fal wrap</div>
       <div className='text-gray-500 pt-2'>$150 for two</div>
 
      </div>

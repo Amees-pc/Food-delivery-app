@@ -13,9 +13,9 @@ export const RestaurauntPage = () => {
                
                <p className='text-gray-600 text-xl'>Zone 1, Opposite RBI, Near Parmali Wallace Complex, Narmadapuram Road, Maharana Pratap Nagar, Bhopa</p>
                  <div className='flex mt-5'>
-                <div className='rounded-4xl border p-2 whitespace-nowrap'>Lorem ipsum dolor sit amet consectetur.</div>
-                <div className=' border-r border-l mr-3 ml-4 pr-2 pl-2 flex items-center whitespace-nowrap'>$100, for two</div>
-                <div className='flex'><div className='underline flex items-center'>7415793311</div></div>
+                <div className='rounded-4xl border p-2 whitespace-nowrap flex px-4 border-gray-300'><div className='text-green-400 border-gray-300 border-r pr-2 mr-2'>Open</div><div>9am-12am</div></div>
+                <div className=' border-r border-l mr-3 ml-4 pr-2 pl-2 flex items-center whitespace-nowrap border-gray-300'>$100, for two</div>
+                <div className='flex'><div className='underline flex items-center border-gray-300'>7415793311</div></div>
              </div>
              </div>
              <div className='flex justify-between ml-10 items-center  '>
@@ -45,10 +45,10 @@ export const RestaurauntPage = () => {
     </div>
 
 {tab=="overview" && (<>
-<div className='p-4 rounded-xl shadow-xl mt-6 z-1 '>
+<div className='p-4 rounded-xl shadow-sm mt-6 z-1 '>
 <div className='flex justify-between mb-8'>
     <div className='text-4xl'>Menu</div>
-    <button className='text-xl text-red-300'>See entire Menu</button>
+    <button className='text-xl text-red-300' onClick={()=>{settab("menu")}}>See entire Menu</button>
 </div>
  <div>
      <div className='text-2xl text-grey-300 mb-4'>Cuisines</div>
@@ -62,7 +62,7 @@ export const RestaurauntPage = () => {
  </div>
 </div>
 
-    <div className='p-4 rounded-xl shadow-2xl mt-6 z-1 '>
+    <div className='p-4 rounded-xl shadow-sm mt-6 z-1 mb-3 '>
         <div className='text-4xl mb-5'>Average cost</div>
         <div className='text-2xl'>$100 for two  people (approx.) Without alcohol</div>
         <div className='text-gray-500'>Exclusive of applicable taxes and charges, if any</div>
@@ -161,7 +161,7 @@ export const RestaurauntPage = () => {
 
 {tab=="menu" && (<>
 
-<div className='flex border-b border-gray-300 p-10 gap-10'>
+{/* <div className='flex border-b border-gray-300 p-10 gap-10'>
     <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c" alt="" 
     className='rounded-xl h-40 w-35'/>
 <div>
@@ -186,7 +186,89 @@ export const RestaurauntPage = () => {
     <div className='text-4xl pb-5'>Pizza</div>
     <div className='text-gray-500 text-xl'>Layers Of Sponge, Chocolate Cream And Mouth Melting Truffle Sauce</div>
 </div>
+</div> */}
+
+<div className='grid grid-cols-4  m-1'>
+ <div className="rounded-xl shadow-2xl m-4 ">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c"
+              alt=""
+              className="object-fit h-40 w-full rounded-xl"
+            />
+          </div>
+          <div className="p-2 ">
+            <div className="flex pb-2 ">
+              <div className="font-semibold text-xl ">Sushi</div>
+            </div>
+            
+             <div className='text-gray-500 '>Layers Of Sponge, Chocolate Cream And Mouth Melting Truffle Sauce</div>
+          </div>
+        </div>
+
+  {/* 2       */}
+
+<div className="rounded-xl shadow-2xl m-4 ">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002"
+              alt=""
+              className="object-fit h-40 w-full rounded-xl"
+            />
+          </div>
+          <div className="p-2 ">
+            <div className="flex pb-2 ">
+              <div className="font-semibold text-xl ">Pizza</div>
+            </div>
+            
+             <div className='text-gray-500 '>Layers Of Sponge, Chocolate Cream And Mouth Melting Truffle Sauce</div>
+          </div>
+        </div>
+
+        {/* 3 */}
+
+        <div className="rounded-xl shadow-2xl m-4 ">
+          <div>
+            <img
+              src="https://crazyaboutpizza.in/pizza/White%20Sauce%20Pasta.jpg"
+              alt=""
+              className="object-fit h-40 w-full rounded-xl"
+            />
+          </div>
+          <div className="p-2 ">
+            <div className="flex pb-2 ">
+              <div className="font-semibold text-xl ">White sauce Pasta</div>
+            </div>
+            
+             <div className='text-gray-500 '>Layers Of Sponge, Chocolate Cream And Mouth Melting Truffle Sauce</div>
+          </div>
+        </div>
+
+        {/* 4 */}
+
+        <div className="rounded-xl shadow-2xl m-4 ">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c"
+              alt=""
+              className="object-fit h-40 w-full rounded-xl"
+            />
+          </div>
+          <div className="p-2 ">
+            <div className="flex pb-2 ">
+              <div className="font-semibold text-xl ">Global Fussion</div>
+            </div>
+            
+             <div className='text-gray-500 '>Layers Of Sponge, Chocolate Cream And Mouth Melting Truffle Sauce</div>
+          </div>
+        </div>
+
 </div>
+
+
+
+
+
 </>)}
 
 {tab=="photos" && (<>

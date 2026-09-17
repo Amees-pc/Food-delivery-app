@@ -60,7 +60,7 @@ const RestaurauntList = () => {
 
           {images.map((i) => (
             <div>
-              <img src={i} alt="" className="mb-0 h-20 w-20 m-4 bg-white" />
+              <img src={i} alt="" className="mb-0 h-25 w-25 m-4 bg-white" />
               <div className="flex  justify-center pr-8">
                 <div>{String(i).slice(-12, -1)}</div>
               </div>
@@ -72,9 +72,9 @@ const RestaurauntList = () => {
       <div className="flex justify-between mt-3 pl-15">
         <h3 className="font-semibold text-3xl mb-7">Restauraunts near u</h3>
       </div>
-      <div className="grid grid-cols-4 px-15 m-4">
+      <div className="grid grid-cols-4 ml-8 px-4">
         {/* 1 */}
-        <div className="rounded-xl shadow-2xl m-4 ">
+        <div className="rounded-xl shadow-xl m-4 ">
           <div>
             <img
               src={GF}

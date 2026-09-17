@@ -20,7 +20,7 @@ function Navbar() {
 
       <div className="navbar-links">
         <a href="/">Home</a>
-        <a href="/restaurants">Restaurants</a>
+        <a href="/list">Restaurants</a>
         <a href="/offers">Offers</a>
         <a href="/about">About</a>
       </div>

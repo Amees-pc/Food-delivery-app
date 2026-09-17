@@ -1,5 +1,5 @@
-
-@import "tailwindcss";
+@import "tailwindcss/theme.css";
+@import "tailwindcss/utilities.css";
 body {
   font-family: Arial, sans-serif;
 }

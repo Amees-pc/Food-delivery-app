@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Biryani from "../assets/assets/Biryani.webp"
 import Biryanicon from "../assets/assets/Biryanicon.jpg"
 import Pizza from "../assets/assets/Pizzza.png"

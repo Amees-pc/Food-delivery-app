@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: row;
   background-color: rgb(255, 217, 224);
-  height: 400px;
+  height: 550px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .offer-page-content {
@@ -12,6 +14,8 @@
 .offer-page-content h3 {
   color: rgb(255, 80, 80);
   margin-bottom: 0px;
+
+
 }
 
 .offer-page-section h1 {
@@ -98,6 +102,7 @@
 
 
 .offer-restaurants-section {
+  height: 400px;
   margin: 39px 90px;
   margin-left: 25px;
 }

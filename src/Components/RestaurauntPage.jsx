@@ -4,13 +4,13 @@ import { User,PhoneCall  } from 'lucide-react';
 export const RestaurauntPage = () => {
     const [tab,settab]=useState("overview")
   return (
-    <div className='mr-20 ml-20 mt-2 '>
+    <div className='mr-10 ml-10 mt-2 '>
 
 <div>
-        <div className='sticky top-0 flex justify-between rounded-xl shadow-2xl p-8 m-1 z-2 bg-white'>
+        <div className='sticky top-0 flex justify-between rounded-md shadow-xl p-8 m-1 z-2 bg-white'>
              <div style={{width:"70%"}}>
-                <div className='font-bold text-6xl pb-5'>Noor-us-sabah</div>
-               <p className='text-gray-600 text-xl'>Rangmahal Cineplex Compound, New Market, TT Nagar, Bhopal</p>
+                <div className='font-bold text-5xl pb-5'>Noor-us-sabah</div>
+               
                <p className='text-gray-600 text-xl'>Zone 1, Opposite RBI, Near Parmali Wallace Complex, Narmadapuram Road, Maharana Pratap Nagar, Bhopa</p>
                  <div className='flex mt-5'>
                 <div className='rounded-4xl border p-2 whitespace-nowrap'>Lorem ipsum dolor sit amet consectetur.</div>
@@ -20,11 +20,11 @@ export const RestaurauntPage = () => {
              </div>
              <div className='flex justify-between ml-10 items-center  '>
             <div className='flex mr-9 '>
-                <div className="h-10 bg-green-900 w-20 rounded-xl flex items-center justify-center mr-2 text-2xl text-white" >4.5</div>
+                <div className="h-10 bg-green-900 w-20 rounded-xl flex items-center justify-center mr-2 text-2xl text-white" > ★ 4.5</div>
                 <div><div className='text-xl font-bold'>275</div><div className='text-xs underline whitespace-nowrap '>Dinning Ratings</div></div>
             </div>
              <div className='flex '>
-                <div className="h-10 bg-green-900 w-20 rounded-xl flex items-center justify-center mr-2 text-2xl text-white " >4.2</div>
+                <div className="h-10 bg-green-900 w-20 rounded-xl flex items-center justify-center mr-2 text-2xl text-white " > ★ 4.2</div>
                 <div><div className='text-xl font-bold'>178</div><div className='whitespace-nowrap text-xs underline'>Delivery Ratings</div></div>
             </div>
              </div>

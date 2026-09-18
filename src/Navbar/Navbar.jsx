@@ -1,21 +1,22 @@
 import React from "react";
-import "./Navbar.css";
+
 import { FaShoppingCart } from "react-icons/fa";
 
 function Navbar() {
   return (
-    <nav className="navbar">
+    <nav className="gap-6 pb-1 flex items-center pt-3 px-7">
       <div className="navbar-logo" style={{ color: "brown" }}>
-        <p style={{ fontSize: "34px", fontWeight: "bold" }}>
-          Taaj food & Restaurants{" "}
+        <p className="mx-4" style={{ fontSize: "34px", fontWeight: "bold" }}>
+         Taaj Food
         </p>
       </div>
 
-      <div className="navbar-search">
-        <input type="text" placeholder="Search for restaurant or food" />
-      </div>
+     
+       <input type="text" className="border w-[400px] py-2 outline-none rounded-md px-2 border-gray-300  " placeholder="
+       search for food or restauraunts" />
+     
 
-      <div className="navbar-links">
+      <div className="flex gap-7">
         <a
           href="/home"
           style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
@@ -46,18 +47,25 @@ function Navbar() {
         >
           Address
         </a>
-      </div>
-      <div className="navbar-auth">
-        <a
+
+          <a
           href="/login"
           style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           Log in
         </a>
-
-        <a href="/register" className="signup-btn">
+      </div>
+       <a
+          href="/register"
+          style={{  fontSize: "18px", fontWeight: "bold" }}
+          className="bg-red-400 rounded-md px-2 py-2 ml-4 text-white"
+        >
           Sign up
         </a>
+      <div className="navbar-auth">
+      
+
+       
       </div>
     </nav>
   );

@@ -27,7 +27,7 @@ const RestaurauntList = () => {
             {" "}
             Restaurant{" "}
           </h1>
-          <p className="mt-3 font-semibold text-3xl">
+          <p className="mt-3 font-semibold text-3xl text-red-700">
             Discover great food, great Restaurants
           </p>
           <p className="mt-4 text-gray-500 text-xl">

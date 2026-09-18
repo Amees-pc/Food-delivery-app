@@ -2,16 +2,16 @@ import React from "react";
 
 import Biryani from "../assets/assets/Biryani.webp";
 import Biryanicon from "../assets/assets/Biryanicon.jpg";
-import Pizza from "../assets/assets/Pizzza.png";
+import Pizza from "../assets/Pizza.png";
 import Pastry from "../assets/assets/Pastry.jpeg";
 import Chinese from "../assets/assets/Noodles.jpeg";
-import Indian from "../assets/assets/Indianpage.jpeg";
+import Indian from "../assets/indian-food.png";
 import Chicken from "../assets/assets/Chicken.jpeg";
-import Burger from "../assets/assets/Burger.jpeg";
+import Burger from "../assets/combo-offer.png";
 import Beverages from "../assets/assets/Bevarages.jpeg";
 import Tabakh from "../assets/assets/Tabakh.webp";
 import GF from "../assets/assets/Globalfusion.jpg";
-import Arabian from "../assets/assets/Arabian.jpg";
+import Arabian from "../assets/chickenTikka.png";
 import Sweet from "../assets/assets/Sweet.webp";
 const RestaurauntList = () => {
   const images = [{image:Pastry,name:"pastry"}, {image:Pizza,name:"Pizaa"}, 

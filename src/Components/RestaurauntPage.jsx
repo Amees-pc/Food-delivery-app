@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import { User,PhoneCall  } from 'lucide-react';
 export const RestaurauntPage = () => {
+  const [role,setrole]=useState("seler")
     const [tab,settab]=useState("overview")
   return (
     <div className='mr-10 ml-10 mt-2 '>
@@ -41,6 +42,8 @@ export const RestaurauntPage = () => {
 <button className={`text-2xl  ${tab=="Reviews"?"border-b-2 border-red-400 text-red-400":"none"}`} onClick={()=>{settab("Reviews")}}>Reviews</button>
 <button className={`text-2xl  ${tab=="photos"?"border-b-2 border-red-400 text-red-400":"none"}`} onClick={()=>{settab("photos")}}>Photos</button>
 <button className={`text-2xl  ${tab=="menu"?"border-b-2 border-red-400 text-red-400":"none"}`} onClick={()=>{settab("menu")}}>Menu</button>
+{role=="seller" && (<button className={`text-2xl  ${tab=="myitems"?"border-b-2 border-red-400 text-red-400":"none"}`} onClick={()=>{settab("myitems")}}>Manage</button>)}
+
 </div>
     </div>
 
@@ -293,6 +296,8 @@ export const RestaurauntPage = () => {
 </div>
 
 </>)}
+
+
 
     </div>
 

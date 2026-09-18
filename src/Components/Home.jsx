@@ -60,11 +60,11 @@ const Home = () => {
 
             <div className="flex items-center gap-3 mt-6">
 
-              <button onClick={handleNavigation2} className="text-white bg-red-600 px-7 py-4 rounded-lg text-[17px]">
+              <button onClick={handleNavigation2} className="text-white bg-red-600 px-7 py-4 rounded-xl text-[17px]">
                 Order Now
               </button>
 
-              <button onClick={handleNavigation} className="text-gray-800 bg-white px-7 py-4 rounded-lg text-[17px] border border-gray-400">
+              <button onClick={handleNavigation} className="text-gray-800 bg-white px-7 py-4 rounded-xl text-[17px] border border-gray-400">
                 Explore Restaurants
               </button>
 

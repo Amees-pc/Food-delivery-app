@@ -6,7 +6,7 @@ import Navbar from "./Navbar/Navbar";
 import Offers from "./Components/Offers";
 import RestaurauntPage from "./Components/RestaurauntPage";
 import RestaurauntList from "./Components/RestaurauntList";
-import { LogIn } from "lucide-react";
+
 import Login from "./Auth/LoginPage";
 import Profile from "./Profile/Profile";
 import { Register } from "./Auth/RegisterPage";
@@ -21,6 +21,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Dashboard />} />
+
+
+         
+          
+          <Route path="/editprofile/:id" element={<EditProfile />} />
+          <Route path="/addresses" element={<><Navbar/><Addresses /></>} />
+          <Route path="/address/add" element={<AddAddress />} />
+          <Route path="/address/edit/:id" element={<EditAddresses />} />
 
           <Route
             path="/details"
@@ -66,7 +74,6 @@ function App() {
             path="/login"
             element={
               <>
-                <Navbar />
                 <Login />
               </>
             }
@@ -76,7 +83,6 @@ function App() {
             path="/register"
             element={
               <>
-                <Navbar />
                 <Register />
               </>
             }

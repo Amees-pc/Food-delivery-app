@@ -47,25 +47,18 @@ function Navbar() {
           Address
         </a>
       </div>
+<div className="navbar-auth">
+  <a
+    href="/login"
+    style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
+  >
+    Log in
+  </a>
 
-      <div className="navbar-auth">
-        {/* <a
-          href="/login"
-          style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
-        >
-          Log in
-        </a> */}
-
-        <a href="/login" className="signup-btn">
-          Sign up
-        </a>
-      </div>
-
-      <div className="navbar-cart">
-        <a href="/carts" className="cart-icon">
-          <FaShoppingCart size={23} />
-        </a>
-      </div>
+  <a href="/register" className="signup-btn">
+    Sign up
+  </a>
+</div>
     </nav>
   );
 }

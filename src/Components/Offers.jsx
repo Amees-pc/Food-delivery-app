@@ -85,7 +85,9 @@ const Offers = () => {
           </div>
           <div></div>
         </div>
-        <h2>TOP OFFERS FOR YOU</h2>
+        <section className="deals-section">
+
+<h2>TOP OFFERS FOR YOU</h2>
         <p>Handpicked deals to make your meal special</p>
 
         <div className="offer-page-card-container">
@@ -141,39 +143,65 @@ const Offers = () => {
             <img src={burgerFriesImg} alt="" />
           </div>
         </div>
+
+        </section>
+        
       </section>
 
       <section className="offer-restaurants-section">
         <h2>RESTAURANTS WITH BEST DEALS</h2>
+        <p>Enjoy exclusive offers from top-rated restaurants</p>
 
         <div className="offer-restaurants-card-container">
           <div className="offer-restaurantscard">
             <img src={burgerOfferImg} alt="" />
             <h3>Buger Point</h3>
-            <span>indian, Fast Food</span>
-            <p>4.6</p>
-            <span>(3520)</span>
+            <p>indian, Fast Food</p>
+            <span> ★ 4.6 </span><span style={{backgroundColor:"white",
+              color:"#535353",margin:"0px"
+            }}>(3520)</span>
+                <div className="coupon-offer">
+              50% OFF up to RS 200 
+              Use Code <div>ZOMATO50</div>
+            </div>
+            
           </div>
           <div className="offer-restaurantscard">
             <img src={chickenBiryaniImg} alt="" />
             <h3>The Food Hub</h3>
-            <span>North indian, Chinese</span>
-            <p>4.6</p>
-            <span>(3520)</span>
+            <p>North indian, Chinese</p>
+            <span> ★ 4.6 </span><span style={{backgroundColor:"white",
+              color:"#535353",margin:"0px"
+            }}>(3520)</span>
+                <div className="coupon-offer">
+              40% OFF up to RS 150 
+              Use Code <div>BURGER50</div>
+            </div>
           </div>
           <div className="offer-restaurantscard">
             <img src={parathaImg} alt="" />
             <h3>Food Court</h3>
-            <span>Mexican, Italian</span>
-            <p>4.3</p>
-            <span>(3520)</span>
+            <p>Mexican, Italian</p>
+           <span> ★ 4.6 </span><span style={{backgroundColor:"white",
+              color:"#535353",margin:"0px"
+            }}>(3520)</span>
+                <div className="coupon-offer">
+              50% OFF up to RS 200 
+              Use Code <div>ZOMATO50</div>
+            </div>
           </div>
           <div className="offer-restaurantscard">
             <img src={tikkaImg} alt="" />
             <h3>Urban Bites</h3>
-            <span>Continental, Italian</span>
-            <p>3.9</p>
-            <span>(3520)</span>
+            <p>Continental, Italian</p>
+             <span> ★ 4.6 </span><span style={{backgroundColor:"white",
+              color:"#535353",margin:"0px"
+            }}>(3520)</span>
+
+            <div className="coupon-offer">
+              50% OFF up to RS 200 
+              Use Code <div>ZOMATO50</div>
+            </div>
           </div>
         </div>
       </section>

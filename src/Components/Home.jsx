@@ -125,26 +125,26 @@ const Home = () => {
             <div className="restaurantscard">
               <img src={chickenBiryaniImg} alt="" />
               <h3>The Food Hub</h3>
-              <span>North indian, Chinese</span>
-              <p>4.6</p>
+              <span>North indian, Chinese</span><br />
+              <p> ★ 4.6 </p><span>(2302)</span>
             </div>
             <div className="restaurantscard">
               <img src={choleBhatureImg} alt="" />
               <h3>Food Court</h3>
-              <span>Mexican, Italian</span>
-              <p>4.3</p>
+              <span>Mexican, Italian</span><br />
+              <p> ★ 4.6 </p><span>(2302)</span>
             </div>
             <div className="restaurantscard">
               <img src={tikkaImg} alt="" />
               <h3>Urban Bites</h3>
-              <span>Continental, Italian</span>
-              <p>3.9</p>
+              <span>Continental, Italian</span><br />
+               <p> ★ 4.1 </p><span>(2302)</span>
             </div>
             <div className="restaurantscard">
               <img src={sweetImg} alt="" />
               <h3>Spice Villa</h3>
-              <span>Biryani, Mughlai</span>
-              <p>4.5</p>
+              <span>Biryani, Mughlai</span><br />
+              <p> ★ 4.3 </p><span>(2302)</span>
             </div>
           </div>
         </section>
@@ -155,6 +155,7 @@ const Home = () => {
               <div>
                 <h2>Get 50% Off</h2>
                 <p>On your first order</p>
+                <h3>Save more, Eat more</h3>
                 <button>Order Now</button>
               </div>
               <img src={pizzaOfferImage} alt="" />

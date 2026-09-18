@@ -6,7 +6,7 @@ import Navbar from "./Navbar/Navbar";
 import Offers from "./Components/Offers";
 import RestaurauntPage from "./Components/RestaurauntPage";
 import RestaurauntList from "./Components/RestaurauntList";
-import { LogIn } from "lucide-react";
+
 import Login from "./Auth/LoginPage";
 import Profile from "./Profile/Profile";
 import { Register } from "./Auth/RegisterPage";
@@ -20,24 +20,85 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-      <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard />} />
 
-          <Route path="/details" element={ <><Navbar/><RestaurauntPage/></>} />
-          <Route path="/list" element={ <><Navbar/><RestaurauntList/></>} />
+
+         
           
-          <Route path="/home" element={ <><Navbar/><Home/></>} />
-          <Route path="/offers" element={<><Navbar/><Offers/></>} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={<Profile />} />
           <Route path="/editprofile/:id" element={<EditProfile />} />
           <Route path="/addresses" element={<><Navbar/><Addresses /></>} />
           <Route path="/address/add" element={<AddAddress />} />
           <Route path="/address/edit/:id" element={<EditAddresses />} />
+
+          <Route
+            path="/details"
+            element={
+              <>
+                <Navbar />
+                <RestaurauntPage />
+              </>
+            }
+          />
+
+          <Route
+            path="/list"
+            element={
+              <>
+                <Navbar />
+                <RestaurauntList />
+              </>
+            }
+          />
+
+          <Route
+            path="/home"
+            element={
+              <>
+                <Navbar />
+                <Home />
+              </>
+            }
+          />
+
+          <Route
+            path="/offers"
+            element={
+              <>
+                <Navbar />
+                <Offers />
+              </>
+            }
+          />
+
+          <Route
+            path="/login"
+            element={
+              <>
+                <Login />
+              </>
+            }
+          />
+
+          <Route
+            path="/register"
+            element={
+              <>
+                <Register />
+              </>
+            }
+          />
+
+          <Route
+            path="/profile"
+            element={
+              <>
+                <Navbar />
+                <Profile />
+              </>
+            }
+          />
         </Routes>
       </BrowserRouter>
-          
-
     </>
   );
 }

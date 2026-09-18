@@ -12,7 +12,7 @@ export const Login = () => {
     <div className="min-h-screen font-sans">
      
 
-      <div className="fixed top-16 left-0 right-0 bottom-0 overflow-hidden">
+      <div className=" top-16  left-0 right-0 bottom-0 overflow-hidden">
         <img
           src="/images-unsplash.jpg"
           alt="Delicious Food"

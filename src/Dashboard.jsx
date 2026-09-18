@@ -1,6 +1,9 @@
 import React from "react";
-
+import {useNavigate} from "react-router-dom"
 export const Dashboard = () => {
+  const nav= useNavigate()
+   const handlerestaurants= ()=>{nav('/list')}
+    const handleexplore= ()=>{nav('/home')}
   return (
     <div
       className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-center"
@@ -25,11 +28,11 @@ export const Dashboard = () => {
         </p>
 
         <div className="mt-8 flex gap-4">
-          <button className="bg-red-500 hover:bg-red-600 text-white px-7 py-3 rounded-xl font-semibold transition">
-            Explore Food
+          <button onClick={handleexplore} className="bg-red-500 hover:bg-red-600 text-white px-7 py-3 rounded-xl font-semibold transition">
+            Explore 
           </button>
 
-          <button className="bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm text-white px-7 py-3 rounded-xl font-semibold transition">
+          <button onClick={handlerestaurants} className="bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm text-white px-7 py-3 rounded-xl font-semibold transition">
             Explore Restaurants
           </button>
         </div>

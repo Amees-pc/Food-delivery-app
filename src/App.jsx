@@ -19,15 +19,12 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="sticky top-0 ">
-          {" "}
-          <Navbar />
-        </div>
-
+        <Navbar />
         <Routes>
           <Route path="/details" element={<RestaurauntPage />} />
           <Route path="/list" element={<RestaurauntList />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/offers" element={<Offers />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -36,7 +33,6 @@ function App() {
           <Route path="/addresses" element={<Addresses />} />
           <Route path="/address/add" element={<AddAddress />} />
           <Route path="/address/edit/:id" element={<EditAddresses />} />
-          <Route path="/Dashboard" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
     </>

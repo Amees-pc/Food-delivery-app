@@ -14,14 +14,9 @@ function Navbar() {
       </div>
 
       <div className="navbar-links">
+        
         <a
-          href="/Dashboard"
-          style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
-        >
-          Dashboard
-        </a>
-        <a
-          href="/"
+          href="/home"
           style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
         >
           Home

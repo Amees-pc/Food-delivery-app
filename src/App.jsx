@@ -23,15 +23,15 @@ function App() {
       <Route path="/" element={<Dashboard />} />
 
           <Route path="/details" element={ <><Navbar/><Dashboard/></>} />
-          <Route path="/list" element={ <><Navbar/><RestaurauntList/></>} />
+          <Route path="/list" element={ <><Navbar/></>} />
           
-          <Route path="/home" element={ <><Navbar/><Home/></>} />
-          <Route path="/offers" element={<><Navbar/><Offers/></>} />
+          <Route path="/home" element={ <Layout><Home /></Layout>} />
+          <Route path="/offers" element={<Layout><Offers /></Layout>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/editprofile/:id" element={<EditProfile />} />
-          <Route path="/addresses" element={<><Navbar/><Addresses /></>} />
+          <Route path="/addresses" element={<Addresses />} />
           <Route path="/address/add" element={<AddAddress />} />
           <Route path="/address/edit/:id" element={<EditAddresses />} />
         </Routes>

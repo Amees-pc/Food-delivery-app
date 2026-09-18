@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 import {
   FaTruck,
   FaCrown,
@@ -29,6 +29,15 @@ import pizzaOfferImage from "../assets/pizza-offer.png";
 import mealOfferImage from "../assets/meal-offer.png";
 
 const Home = () => {
+  const navigate = useNavigate()
+
+  const handleNavigation =()=>{
+    navigate(`/list`)
+  }
+
+    const handleNavigation2 =()=>{
+    navigate(`/offers`)
+  }
   return (
     <>
       <div className="w-full ml-7">
@@ -51,11 +60,11 @@ const Home = () => {
 
             <div className="flex items-center gap-3 mt-6">
 
-              <button className="text-white bg-red-600 px-7 py-4 rounded-lg text-[17px]">
+              <button onClick={handleNavigation2} className="text-white bg-red-600 px-7 py-4 rounded-lg text-[17px]">
                 Order Now
               </button>
 
-              <button className="text-gray-800 bg-white px-7 py-4 rounded-lg text-[17px] border border-gray-400">
+              <button onClick={handleNavigation} className="text-gray-800 bg-white px-7 py-4 rounded-lg text-[17px] border border-gray-400">
                 Explore Restaurants
               </button>
 

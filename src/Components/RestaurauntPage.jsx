@@ -203,6 +203,7 @@ export const RestaurauntPage = () => {
             </div>
             
              <div className='text-gray-500 '>Layers Of Sponge, Chocolate Cream And Mouth Melting Truffle Sauce</div>
+          <button className='bg-red-600 mb-1 py-1  px-2 mt-2 rounded-md text-white'>Add to cart</button>
           </div>
         </div>
 
@@ -222,6 +223,7 @@ export const RestaurauntPage = () => {
             </div>
             
              <div className='text-gray-500 '>Layers Of Sponge, Chocolate Cream And Mouth Melting Truffle Sauce</div>
+          <button className='bg-red-600 mb-1 py-1  px-2 mt-2 rounded-md text-white'>Add to cart</button>
           </div>
         </div>
 
@@ -241,6 +243,7 @@ export const RestaurauntPage = () => {
             </div>
             
              <div className='text-gray-500 '>Layers Of Sponge, Chocolate Cream And Mouth Melting Truffle Sauce</div>
+          <button className='bg-red-600 mb-1 py-1  px-2 mt-2 rounded-md text-white'>Add to cart</button>
           </div>
         </div>
 
@@ -254,12 +257,13 @@ export const RestaurauntPage = () => {
               className="object-fit h-40 w-full rounded-xl"
             />
           </div>
-          <div className="p-2 ">
+          <div className="p-2 pl-3 ">
             <div className="flex pb-2 ">
               <div className="font-semibold text-xl ">Global Fussion</div>
             </div>
             
              <div className='text-gray-500 '>Layers Of Sponge, Chocolate Cream And Mouth Melting Truffle Sauce</div>
+           <button className='bg-red-600 mb-1 py-1  px-2 mt-2 rounded-md text-white'>Add to cart</button>
           </div>
         </div>
 

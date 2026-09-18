@@ -14,7 +14,9 @@ import GF from "../assets/assets/Globalfusion.jpg";
 import Arabian from "../assets/assets/Arabian.jpg";
 import Sweet from "../assets/assets/Sweet.webp";
 const RestaurauntList = () => {
-  const images = [Pastry, Pizza, Beverages, Chicken, Chinese, Burger, Indian];
+  const images = [{image:Pastry,name:"pastry"}, {image:Pizza,name:"Pizaa"}, 
+    {image:Beverages,name:"Bevarages"}, {image:Chicken,name:'Grills'}, {image:Chinese,name:"Chinese"},
+     {image:Burger,name:"Burgers"}, {image:Indian,name:"Indian"}];
   return (
     <div>
       <div className="bg-pink-100 grid grid-cols-2 px-10 py-16 pb-0">
@@ -60,9 +62,9 @@ const RestaurauntList = () => {
 
           {images.map((i) => (
             <div>
-              <img src={i} alt="" className="mb-0 h-25 w-25 m-4 bg-white" />
+              <img src={i.image} alt="" className="mb-0 h-25 w-25 m-4 bg-white" />
               <div className="flex  justify-center pr-8">
-                <div>{String(i).slice(-12, -1)}</div>
+                <div>{i.name}</div>
               </div>
             </div>
           ))}
@@ -70,7 +72,7 @@ const RestaurauntList = () => {
       </div>
 
       <div className="flex justify-between mt-3 pl-15">
-        <h3 className="font-semibold text-3xl mb-7">Restauraunts near u</h3>
+        <h3 className="font-semibold text-3xl mb-7">Restaurants near u</h3>
       </div>
       <div className="grid grid-cols-4 ml-8 px-4">
         {/* 1 */}

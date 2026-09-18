@@ -90,8 +90,8 @@ const RestaurauntList = () => {
             </div>
             <div>
               {" "}
-              <div className="ml-4 h-5 bg-green-900 w-10 rounded-md flex items-center justify-center  text-sm text-white">
-                4.5
+              <div className="ml- px-2 py-1  bg-green-900 w-fit rounded-md   text-sm text-white">
+                ★ 4.2
               </div>
             </div>
             <div className="text-gray-500 pt-2 text-xs">
@@ -116,8 +116,8 @@ const RestaurauntList = () => {
             </div>
             <div>
               {" "}
-              <div className="ml-4 h-5 bg-green-900 w-10 rounded-md flex items-center justify-center  text-sm text-white">
-                4.5
+              <div className="ml- px-2 py-1  bg-green-900 w-fit rounded-md   text-sm text-white">
+                ★ 4.5
               </div>
             </div>
             <div className="text-gray-500 pt-2 text-xs">
@@ -142,8 +142,8 @@ const RestaurauntList = () => {
             </div>
             <div>
               {" "}
-              <div className="ml-4 h-5 bg-green-900 w-10 rounded-md flex items-center justify-center  text-sm text-white">
-                4.5
+              <div className="ml- px-2 py-1  bg-green-900 w-fit rounded-md   text-sm text-white">
+                ★ 4.1
               </div>
             </div>
             <div className="text-gray-500 pt-2 text-xs">
@@ -169,8 +169,8 @@ const RestaurauntList = () => {
             </div>
             <div>
               {" "}
-              <div className="ml-4 h-5 bg-green-900 w-10 rounded-md flex items-center justify-center  text-sm text-white">
-                4.5
+             <div className="ml- px-2 py-1  bg-green-900 w-fit rounded-md   text-sm text-white">
+                ★ 4.8
               </div>
             </div>
             <div className="text-gray-500 pt-2 text-xs">

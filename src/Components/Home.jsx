@@ -146,7 +146,7 @@ const Home = () => {
           </p>
 
 
-          <div className="flex gap-10">
+          <div className="flex gap-13">
 
             <div className="text-center">
               <img
@@ -248,7 +248,7 @@ const Home = () => {
           </p>
 
 
-          <div className="flex gap-6 mt-7 w-[1330px]">
+          <div className="flex gap-9 mt-7 w-[1360px]">
 
 
             <div className="pb-4 h-[345px] w-[480px] bg-white shadow-lg rounded-2xl overflow-hidden">
@@ -385,11 +385,11 @@ const Home = () => {
 
         <section className="ml-6 mb-10">
 
-          <div className="flex gap-6 mt-7 mr-8 w-[1440px]">
+          <div className="flex gap-8 mt-7 mr-8 w-[1470px]">
 
 
 
-            <div className="flex justify-between items-center h-[220px] w-[653px] p-5 bg-red-200 shadow-lg rounded-2xl overflow-hidden">
+            <div className="flex justify-between items-center h-[220px] w-[660px] p-5 bg-red-200 shadow-lg rounded-2xl overflow-hidden">
 
               <div>
 
@@ -421,7 +421,7 @@ const Home = () => {
 
 
 
-            <div className="flex justify-between items-center h-[220px] w-[656px] p-5 bg-orange-300 shadow-lg rounded-2xl overflow-hidden">
+            <div className="flex justify-between items-center h-[220px] w-[669px] p-5 bg-orange-300 shadow-lg rounded-2xl overflow-hidden">
 
               <div>
 

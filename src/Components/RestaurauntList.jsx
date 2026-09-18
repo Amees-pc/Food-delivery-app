@@ -13,7 +13,9 @@ import Tabakh from "../assets/assets/Tabakh.webp";
 import GF from "../assets/assets/Globalfusion.jpg";
 import Arabian from "../assets/chickenTikka.png";
 import Sweet from "../assets/assets/Sweet.webp";
+import { useNavigate } from "react-router-dom";
 const RestaurauntList = () => {
+  const nav=useNavigate()
   const images = [{image:Pastry,name:"pastry"}, {image:Pizza,name:"Pizaa"}, 
     {image:Beverages,name:"Bevarages"}, {image:Chicken,name:'Grills'}, {image:Chinese,name:"Chinese"},
      {image:Burger,name:"Burgers"}, {image:Indian,name:"Indian"}];
@@ -76,7 +78,7 @@ const RestaurauntList = () => {
       </div>
       <div className="grid grid-cols-4 ml-8 px-4">
         {/* 1 */}
-        <div className="rounded-xl shadow-xl m-4 ">
+        <div className="rounded-xl shadow-xl m-4 " onClick={()=>{nav("/details")}}>
           <div>
             <img
               src={GF}

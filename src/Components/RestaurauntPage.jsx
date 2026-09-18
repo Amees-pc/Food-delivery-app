@@ -10,7 +10,7 @@ export const RestaurauntPage = () => {
 <div>
         <div className='sticky top-0 flex justify-between rounded-md shadow-xl p-8 m-1 z-2 bg-white'>
              <div style={{width:"70%"}}>
-                <div className='font-bold text-5xl pb-5'>Noor-us-sabah</div>
+                <div className='font-bold text-5xl pb-5'>Global-Fussion</div>
                
                <p className='text-gray-600 text-xl'>Zone 1, Opposite RBI, Near Parmali Wallace Complex, Narmadapuram Road, Maharana Pratap Nagar, Bhopa</p>
                  <div className='flex mt-5'>

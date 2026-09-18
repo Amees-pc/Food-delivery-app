@@ -23,8 +23,8 @@ const Offers = () => {
   return (
     <div className="offer-page-container">
       <section className="offer-page-section">
-        <div className="offer-page-content">
-          <h3>EXCLUSIVE OFFERS</h3>
+        <div className="offer-page-content" style={{color:"Navy"}}>
+          <h2 style={{fontSize:"30px"}}>EXCLUSIVE OFFERS🎉</h2>
           <h1>
             Hot Deals <br />
             On Your Favourite <br /> Food
@@ -51,7 +51,7 @@ const Offers = () => {
       </section>
 
       <section className="offer-page-body">
-        <h2>OFFERS BY CUISINE</h2>
+        <h2 style={{color:"Navy"}}>OFFERS BY CUISINE</h2>
         <p>Find the best deals on your favorite cuisines</p>
 
         <div className="offer-page-categories-list">

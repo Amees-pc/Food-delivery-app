@@ -55,7 +55,7 @@ export const EditAddresses = () => {
     );
 
     localStorage.setItem("addresses", JSON.stringify(updated));
-    navigate("/address");
+    navigate("/addresses");
   };
 
   return (

@@ -47,7 +47,7 @@ export const AddAddress = () => {
       JSON.stringify([...addresses, newAddress]),
     );
 
-    navigate("/address");
+    navigate("/addresses");
   };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 via-white to-slate-100 font-sans px-4 py-10">

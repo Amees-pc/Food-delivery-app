@@ -6,7 +6,9 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo" style={{ color: "brown" }}>
-        <p style={{ fontSize: "34px", fontWeight: "bold" }}>Taaj food </p>
+        <p style={{ fontSize: "34px", fontWeight: "bold" }}>
+          Taaj food & Restaurants{" "}
+        </p>
       </div>
 
       <div className="navbar-search">
@@ -14,34 +16,33 @@ function Navbar() {
       </div>
 
       <div className="navbar-links">
-        
         <a
           href="/home"
-          style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
+          style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           Home
         </a>
         <a
           href="/list"
-          style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
+          style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           Restaurants
         </a>
         <a
           href="/offers"
-          style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
+          style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           Offers
         </a>
         <a
           href="/about"
-          style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
+          style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           About
         </a>
         <a
           href="/addresses"
-          style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
+          style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           Address
         </a>
@@ -49,7 +50,7 @@ function Navbar() {
       <div className="navbar-auth">
         <a
           href="/login"
-          style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
+          style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           Log in
         </a>

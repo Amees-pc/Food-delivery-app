@@ -14,11 +14,16 @@ import { EditProfile } from "./Profile/EditProfile";
 import { Addresses } from "./address/Addresses";
 import { AddAddress } from "./address/AddAddresses";
 import { EditAddresses } from "./address/EditAddresses";
+import { Dashboard } from "./Dashboard";
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <div className="sticky top-0 ">
+          {" "}
+          <Navbar />
+        </div>
+
         <Routes>
           <Route path="/details" element={<RestaurauntPage />} />
           <Route path="/list" element={<RestaurauntList />} />
@@ -31,6 +36,7 @@ function App() {
           <Route path="/addresses" element={<Addresses />} />
           <Route path="/address/add" element={<AddAddress />} />
           <Route path="/address/edit/:id" element={<EditAddresses />} />
+          <Route path="/Dashboard" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -6,9 +6,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo" style={{ color: "brown" }}>
-        <p style={{ fontSize: "34px", fontWeight: "bold" }}>
-          Taaj food delivery App{" "}
-        </p>
+        <p style={{ fontSize: "34px", fontWeight: "bold" }}>Taaj food </p>
       </div>
 
       <div className="navbar-search">
@@ -16,6 +14,12 @@ function Navbar() {
       </div>
 
       <div className="navbar-links">
+        <a
+          href="/Dashboard"
+          style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
+        >
+          Dashboard
+        </a>
         <a
           href="/"
           style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
@@ -47,18 +51,18 @@ function Navbar() {
           Address
         </a>
       </div>
-<div className="navbar-auth">
-  <a
-    href="/login"
-    style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
-  >
-    Log in
-  </a>
+      <div className="navbar-auth">
+        <a
+          href="/login"
+          style={{ color: "Navy", fontSize: "18px", fontWeight: "bold" }}
+        >
+          Log in
+        </a>
 
-  <a href="/register" className="signup-btn">
-    Sign up
-  </a>
-</div>
+        <a href="/register" className="signup-btn">
+          Sign up
+        </a>
+      </div>
     </nav>
   );
 }

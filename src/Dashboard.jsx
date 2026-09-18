@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Home = () => {
+export const Dashboard = () => {
   return (
     <div
       className="min-h-screen bg-cover bg-center bg-no-repeat relative flex items-center"

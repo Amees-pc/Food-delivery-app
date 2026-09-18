@@ -81,7 +81,7 @@ const Offers = () => {
           Find the best deals on your favorite cuisines
         </p>
 
-        <div className="flex gap-16">
+        <div className="flex gap-12">
 
           <div className="text-center">
             <img
@@ -165,7 +165,7 @@ const Offers = () => {
           <div className="flex flex-wrap gap-5 mt-7">
 
 
-            <div className="flex justify-between items-center w-85 h-52 p-5 bg-red-200 shadow-lg rounded-2xl overflow-hidden">
+            <div className="flex justify-between items-center w-79 h-52 p-5 bg-red-200 shadow-lg rounded-2xl overflow-hidden">
 
               <div>
 
@@ -193,7 +193,7 @@ const Offers = () => {
 
 
 
-            <div className="flex justify-between items-center w-84 h-52 p-5 bg-orange-200 shadow-lg rounded-2xl overflow-hidden">
+            <div className="flex justify-between items-center w-79 h-52 p-5 bg-orange-200 shadow-lg rounded-2xl overflow-hidden">
 
               <div>
 
@@ -225,7 +225,7 @@ const Offers = () => {
 
 
 
-            <div className="flex justify-between items-center w-85 h-52 p-4 bg-green-200 shadow-lg rounded-2xl overflow-hidden">
+            <div className="flex justify-between items-center w-79 h-52 p-4 bg-green-200 shadow-lg rounded-2xl overflow-hidden">
 
               <div>
 
@@ -257,7 +257,7 @@ const Offers = () => {
 
 
 
-            <div className="flex justify-between items-center w-85 h-52 p-5 bg-pink-200 shadow-lg rounded-2xl overflow-hidden">
+            <div className="flex justify-between items-center w-79 h-52 p-5 bg-pink-200 shadow-lg rounded-2xl overflow-hidden">
 
               <div>
 
@@ -305,7 +305,7 @@ const Offers = () => {
         <div className="flex gap-5  mt-7">
 
 
-          <div className="w-85 bg-white shadow-2xl rounded-2xl overflow-hidden">
+          <div className="w-80 bg-white shadow-2xl rounded-2xl overflow-hidden">
 
             <img
               src={burgerOfferImg}
@@ -352,7 +352,7 @@ const Offers = () => {
 
 
 
-          <div className="w-85 bg-white shadow-2xl rounded-2xl overflow-hidden">
+          <div className="w-80 bg-white shadow-2xl rounded-2xl overflow-hidden">
 
             <img
               src={chickenBiryaniImg}
@@ -399,7 +399,7 @@ const Offers = () => {
 
 
 
-          <div className="w-85  bg-white shadow-2xl rounded-2xl overflow-hidden">
+          <div className="w-80  bg-white shadow-2xl rounded-2xl overflow-hidden">
 
             <img
               src={parathaImg}
@@ -446,7 +446,7 @@ const Offers = () => {
 
 
 
-          <div className="w-84  bg-white shadow-2xl rounded-2xl overflow-hidden">
+          <div className="w-80  bg-white shadow-2xl rounded-2xl overflow-hidden">
 
             <img
               src={tikkaImg}

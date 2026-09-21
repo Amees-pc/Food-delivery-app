@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Pizza from "../assets/Pizza.png";
 import Pastry from "../assets/assets/Pastry.jpeg";
 import Chinese from "../assets/assets/Noodles.jpeg";
@@ -12,6 +12,47 @@ import Arabian from "../assets/chickenTikka.png";
 import Sweet from "../assets/assets/Sweet.webp";
 const MyCart = () => {
     const [payment,setpayment]=useState("")
+    const [items,setitems]=useState({i1:1,i2:1,i3:1,i4:1})
+    const [cost,setcost]=useState(9)
+    let totalcost=(i)=>{
+        
+           if (i=="i1") {
+            setcost((prev)=>(prev+ 2))
+            
+           }
+            if (i=="i2") {
+            setcost((prev)=>(prev+ 2))
+           }
+            if (i=="i3") {
+            setcost((prev)=>(prev+ 2))
+           }
+            if (i=="i4") {
+            setcost((prev)=>(prev+ 3))
+           }
+            
+        
+        
+    }
+
+     let remove=(i)=>{
+        
+           if (i=="i1") {
+            setcost((prev)=>(prev- 2))
+           }
+            if (i=="i2") {
+            setcost((prev)=>(prev- 2))
+           }
+            if (i=="i3") {
+            setcost((prev)=>(prev- 2))
+           }
+            if (i=="i4") {
+            setcost((prev)=>(prev- 3))
+           }
+            
+        
+        
+    }
+    
   return (
     <div className=' mx-30 mt-6 '> 
   <div >  
@@ -34,9 +75,9 @@ const MyCart = () => {
  
  <div className='flex justify-center items-center'>
     <div className='flex justify-between rounded-md w-30  px-2 py-1 gap-4 bg-gray-50'>
-     <button className='text-lg'>-</button>
-    <div className='text-lg'>1</div>
-    <button className='text-lg'>+</button>
+     <button className='text-lg' onClick={()=>{setitems((prev)=>({...prev,i1:prev.i1-1})); remove("i1") }}>-</button>
+    <div className='text-lg'>{items.i1}</div>
+    <button className='text-lg'  onClick={()=>{setitems((prev)=>({...prev,i1:prev.i1+1})); totalcost("i1")}}>+</button>
  </div>
  </div>
 
@@ -60,9 +101,9 @@ const MyCart = () => {
  
  <div className='flex justify-center items-center'>
     <div className='flex justify-between rounded-md w-30  px-2 py-1 gap-4 bg-gray-50'>
-     <button className='text-lg'>-</button>
-    <div className='text-lg'>1</div>
-    <button className='text-lg'>+</button>
+     <button className='text-lg' onClick={()=>{setitems((prev)=>({...prev,i2:prev.i2-1})); remove("i2") }}>-</button>
+    <div className='text-lg'>{items.i2}</div>
+    <button className='text-lg'  onClick={()=>{setitems((prev)=>({...prev,i2:prev.i2+1})) ; totalcost("i2")}}>+</button>
  </div>
  </div>
 
@@ -85,9 +126,9 @@ const MyCart = () => {
  
  <div className='flex justify-center items-center'>
     <div className='flex justify-between rounded-md w-30  px-2 py-1 gap-4 bg-gray-50'>
-     <button className='text-lg'>-</button>
-    <div className='text-lg'>1</div>
-    <button className='text-lg'>+</button>
+     <button className='text-lg' onClick={()=>{setitems((prev)=>({...prev,i3:prev.i3-1})) ; remove("i3")}}>-</button>
+    <div className='text-lg'>{items.i3}</div>
+    <button className='text-lg'  onClick={()=>{setitems((prev)=>({...prev,i3:prev.i3+1})); totalcost("i3")}}>+</button>
  </div>
  </div>
 
@@ -105,15 +146,15 @@ const MyCart = () => {
                 <div>
                 <div className=' text-xl font-bold '>Salad</div>
                 <div className='text-sm text-gray-500'>Global Fussion</div>
-                <div className='text-red-400'>$2.00</div>
+                <div className='text-red-400'>$3.00</div>
                 </div>
             </div>
  
  <div className='flex justify-center items-center'>
     <div className='flex justify-between rounded-md w-30  px-2 py-1 gap-4 bg-gray-50'>
-    <button className='text-lg'>-</button>
-    <div className='text-lg'>1</div>
-    <button className='text-lg'>+</button>
+    <button className='text-lg' onClick={()=>{setitems((prev)=>({...prev,i4:prev.i4-1})); remove("i4") }}>-</button>
+    <div className='text-lg'>{items.i4}</div>
+    <button className='text-lg'  onClick={()=>{setitems((prev)=>({...prev,i4:prev.i4+1})); totalcost("i4") }}>+</button>
  </div>
  </div>
 
@@ -129,7 +170,7 @@ const MyCart = () => {
         <div className='py-4 border-b border-gray-300'>
             <div className='flex justify-between my-4 mt-2'>
             <div className='text-gray-500'>Subtotal (4 items)</div>
-            <div className='text-gray-500'>$9.00</div>
+            <div className='text-gray-500'>${cost}</div>
         </div>
          <div className='flex justify-between my-4'>
             <div className='text-gray-500'>Delivery Fee</div>
@@ -142,7 +183,7 @@ const MyCart = () => {
         </div>
        <div className='flex justify-between mt-5'>
         <div className='font-bold text-xl'>Total</div>
-        <div className='text-xl font-bold text-red-700'>$10.60</div>
+        <div className='text-xl font-bold text-red-700'>${1.60 +cost}</div>
        </div>
        <button className='w-full bg-red-500 text-white py-1 mt-5 rounded-md'>Place Order</button>
 

@@ -7,6 +7,7 @@ export const Profile = () => {
     email: "sartaj@gmail.com",
     phone: "7307477233",
     bio: "Frontend developer. Who loves React.",
+    role: "Admin",
   };
 
   return (
@@ -106,7 +107,7 @@ export const Profile = () => {
                 </svg>
               </div>
 
-              <div className="min-w-2">
+              <div className="min-w-0">
                 <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
                   Email
                 </p>
@@ -117,6 +118,7 @@ export const Profile = () => {
               </div>
             </div>
 
+            {/* Phone */}
             <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200 hover:bg-red-50 hover:border-red-100 transition-all duration-200">
               <div className="w-9 h-9 rounded-lg bg-[#E23744] text-white flex items-center justify-center shrink-0">
                 <svg
@@ -172,10 +174,38 @@ export const Profile = () => {
                 </p>
               </div>
             </div>
+
+            <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200 hover:bg-red-50 hover:border-red-100 transition-all duration-200">
+              <div className="w-9 h-9 rounded-lg bg-[#E23744] text-white flex items-center justify-center shrink-0">
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M8 10h8M8 14h5M6 20l-3 1 1-3a8 8 0 111.5 1.5L6 20z"
+                  />
+                </svg>
+              </div>
+
+              <div className="min-w-0">
+                <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
+                  Role
+                </p>
+
+                <p className="text-sm font-semibold text-[#1F1F1F] leading-relaxed">
+                  {user.role}
+                </p>
+              </div>
+            </div>
           </div>
 
           <Link
-            to="/profile/edit"
+            to="/profile/edit/"
             className="mt-5 flex items-center justify-center gap-2 w-full py-3 px-4 bg-[#E23744] hover:bg-[#C91F2D] text-white text-sm font-semibold rounded-xl shadow-md shadow-red-200 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
           >
             <svg
@@ -199,4 +229,4 @@ export const Profile = () => {
   );
 };
 
-export default Profile
+export default Profile;

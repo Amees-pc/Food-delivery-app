@@ -129,7 +129,7 @@ const Home = () => {
 
 
 
-          <div className="ml-36">
+          <div className="ml-48">
 
             <img
               src={foodImage}
@@ -154,7 +154,7 @@ const Home = () => {
           </p>
 
 
-          <div className="w-full flex gap-13">
+          <div className="w-full flex gap-14">
 
             <div className="text-center">
               <img
@@ -256,7 +256,7 @@ const Home = () => {
           </p>
 
 
-          <div className="flex gap-9 mt-7 w-[1360px]">
+          <div className="flex gap-9 mt-7 w-full ">
 
 
             <div className="pb-4 h-[345px] w-[480px] bg-white shadow-lg rounded-2xl overflow-hidden">
@@ -393,11 +393,11 @@ const Home = () => {
 
         <section className="ml-6 mb-10">
 
-          <div className="flex gap-8 mt-7 mr-8 w-[1470px]">
+          <div className="flex gap-8 mt-7 mr-8 w-full">
 
 
 
-            <div className="flex justify-between items-center h-[220px] w-[660px] p-5 bg-red-200 shadow-lg rounded-2xl overflow-hidden">
+            <div className="flex justify-between items-center h-[220px] w-[694px] p-5 bg-red-200 shadow-lg rounded-2xl overflow-hidden">
 
               <div>
 
@@ -429,7 +429,7 @@ const Home = () => {
 
 
 
-            <div className="flex justify-between items-center h-[220px] w-[669px] p-5 bg-orange-300 shadow-lg rounded-2xl overflow-hidden">
+            <div className="flex justify-between items-center h-[220px] w-[688px] p-5 bg-orange-300 shadow-lg rounded-2xl overflow-hidden">
 
               <div>
 
@@ -470,7 +470,7 @@ const Home = () => {
           </h2>
 
 
-          <div className="flex items-center justify-center gap-42 mr-39">
+          <div className="flex items-center justify-center gap-48 mr-30">
 
 
 

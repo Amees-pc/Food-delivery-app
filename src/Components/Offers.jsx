@@ -25,7 +25,7 @@ import offerImage from "../assets/offers.png";
 const Offers = () => {
   return (
     <div>
-      <section className="px-8 py-3 flex bg-pink-100 h-[460px] overflow-hidden">
+      <section className="w-full px-8 py-3 flex bg-pink-100 h-[460px] overflow-hidden">
         <div className="mt-10">
           <h3 className="text-2xl font-semibold text-red-600 mb-1">
             EXCLUSIVE OFFERS
@@ -55,7 +55,7 @@ const Offers = () => {
           </div>
         </div>
 
-        <div className="ml-32">
+        <div className="ml-48">
           <img
             src={offerImage}
             alt=""
@@ -73,7 +73,7 @@ const Offers = () => {
           Find the best deals on your favorite cuisines
         </p>
 
-        <div className="flex gap-16">
+        <div className="flex gap-18">
           <div className="text-center">
             <img
               src={pizzaImage}
@@ -141,7 +141,7 @@ const Offers = () => {
           </p>
 
           <div className="flex flex-wrap gap-8 mt-7">
-            <div className="flex justify-between items-center w-80 h-52 p-5 bg-red-200 shadow-lg rounded-2xl overflow-hidden">
+            <div className="flex justify-between items-center w-83 h-52 p-5 bg-red-200 shadow-lg rounded-2xl overflow-hidden">
               <div>
                 <h2 className="text-2xl font-bold text-red-700">Get 50% Off</h2>
 
@@ -161,7 +161,7 @@ const Offers = () => {
               />
             </div>
 
-            <div className="flex justify-between items-center w-80 h-52 p-5 bg-orange-200 shadow-lg rounded-2xl overflow-hidden">
+            <div className="flex justify-between items-center w-83 h-52 p-5 bg-orange-200 shadow-lg rounded-2xl overflow-hidden">
               <div>
                 <span className="text-base font-semibold">FLAT</span>
 
@@ -187,7 +187,7 @@ const Offers = () => {
               />
             </div>
 
-            <div className="flex justify-between items-center w-80 h-52 p-4 bg-green-200 shadow-lg rounded-2xl overflow-hidden">
+            <div className="flex justify-between items-center w-83 h-52 p-4 bg-green-200 shadow-lg rounded-2xl overflow-hidden">
               <div>
                 <h2 className="text-2xl font-bold leading-tight">
                   <span className="text-2xl">FREE</span>
@@ -211,7 +211,7 @@ const Offers = () => {
               />
             </div>
 
-            <div className="flex justify-between items-center w-80 h-52 p-5 bg-pink-200 shadow-lg rounded-2xl overflow-hidden">
+            <div className="flex justify-between items-center w-83 h-52 p-5 bg-pink-200 shadow-lg rounded-2xl overflow-hidden">
               <div>
                 <h2 className="text-2xl font-bold text-red-600 leading-tight">
                   Combo Deals
@@ -245,8 +245,8 @@ const Offers = () => {
           Enjoy exclusive offers from top-rated restaurants
         </p>
 
-        <div className="flex gap-7  mt-7">
-          <div className="w-81 bg-white shadow-2xl rounded-2xl overflow-hidden">
+        <div className="w-full flex gap-6  mt-7">
+          <div className="w-85 bg-white shadow-xl rounded-2xl overflow-hidden">
             <img
               src={burgerOfferImg}
               alt=""
@@ -277,7 +277,7 @@ const Offers = () => {
             </div>
           </div>
 
-          <div className="w-81 bg-white shadow-2xl rounded-2xl overflow-hidden">
+          <div className="w-85 bg-white shadow-xl rounded-2xl overflow-hidden">
             <img
               src={chickenBiryaniImg}
               alt=""
@@ -310,7 +310,7 @@ const Offers = () => {
             </div>
           </div>
 
-          <div className="w-81  bg-white shadow-2xl rounded-2xl overflow-hidden">
+          <div className="w-85  bg-white shadow-xl rounded-2xl overflow-hidden">
             <img src={parathaImg} alt="" className="w-full h-48 object-cover" />
 
             <h3 className="mt-2 ml-5 text-lg font-semibold">Food Court</h3>
@@ -337,7 +337,7 @@ const Offers = () => {
             </div>
           </div>
 
-          <div className="w-81  bg-white shadow-2xl rounded-2xl overflow-hidden">
+          <div className="w-85  bg-white shadow-xl rounded-2xl overflow-hidden">
             <img src={tikkaImg} alt="" className="w-full h-48 object-cover " />
 
             <h3 className="mt-2 ml-5 text-lg font-semibold">Urban Bites</h3>

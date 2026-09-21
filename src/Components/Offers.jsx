@@ -18,6 +18,7 @@ import pizzaComboImg from "../assets/pizza-combo.png";
 import biryaniraitaImg from "../assets/biryani-raita-combo.png";
 import burgerComboImg from "../assets/burger-combo.png";
 import ChineseComboImg from "../assets/chinese-combo.png";
+import footerPizzaImg from "../assets/footer-pizza.png";
 
 import offerImage from "../assets/offers.png";
 
@@ -166,7 +167,12 @@ const Offers = () => {
 
                 <h2 className="text-2xl font-bold text-red-600">$1.00 OFF</h2>
                 <p className="mt-2 text-sm text-gray-700">
-                  On orders above <span className="font-semibold mt-2 text-red-500">  <br />$5.00</span>
+                  On orders above{" "}
+                  <span className="font-semibold mt-2 text-red-500">
+                    {" "}
+                    <br />
+                    $5.00
+                  </span>
                 </p>
 
                 <button className="mt-2 bg-white px-3 py-2 rounded-lg text-sm font-bold text-red-600 shadow-lg">
@@ -211,7 +217,10 @@ const Offers = () => {
                   Combo Deals
                 </h2>
 
-                <p className="mt-2 text-sm text-gray-700">Starting at  <span className="text-red-500 text-lg font-bold">$2</span></p>
+                <p className="mt-2 text-sm text-gray-700">
+                  Starting at{" "}
+                  <span className="text-red-500 text-lg font-bold">$2</span>
+                </p>
                 <button className="mt-5 bg-white px-3 py-2 rounded-lg text-sm font-bold text-red-600 shadow-lg">
                   Order Now
                 </button>
@@ -482,6 +491,30 @@ const Offers = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="mx-10 mt-13 mb-10">
+        <div className="w-full h-55 flex px-10 py-10 shadow-xl rounded-xl bg-red-200">
+          <div className="mt-2">
+            <h2 className="text-4xl font-semibold text-black-700">
+              Hungry? <br /> Great Offers are just a click away!
+            </h2>
+            <p className="mt-4 text-lg text-gray-700">
+              Order now and enjoy delicious food at amazing prices
+            </p>
+          </div>
+
+          <div className="mt-0">
+            <img
+              src={footerPizzaImg}
+              alt=""
+              className="w-150 h-40 mb-2 object-contain"
+            />
+          </div>
+
+          <div> <button className="mx-6 px-7 py-4 my-18 text-white rounded-xl bg-red-600">Order Now</button></div>
+         
         </div>
       </section>
     </div>

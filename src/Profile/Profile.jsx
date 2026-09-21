@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 export const Profile = () => {
+  const Navigate=useNavigate()
   const user = {
     name: "sartaj Alam",
     email: "sartaj@gmail.com",
@@ -9,6 +10,12 @@ export const Profile = () => {
     bio: "Frontend developer. Who loves React.",
     role: "Admin",
   };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    Navigate("/login");
+  };
+
 
   return (
     <div
@@ -223,6 +230,16 @@ export const Profile = () => {
             </svg>
             Edit Profile
           </Link>
+          <div>
+            {/* baaki profile UI */}
+
+            <button
+              onClick={handleLogout}
+              className="w-full mt-6 py-3 rounded-xl bg-[#E23744] text-white font-semibold hover:bg-[#D92D3A] transition"
+            >
+              Logout
+            </button>
+          </div>
         </div>
       </div>
     </div>

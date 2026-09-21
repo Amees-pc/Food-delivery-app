@@ -1,5 +1,7 @@
 import React from "react";
 import {useNavigate} from "react-router-dom"
+
+
 export const Dashboard = () => {
   const nav= useNavigate()
    const handlerestaurants= ()=>{nav('/list')}

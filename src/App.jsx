@@ -22,11 +22,16 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
 
-
-         
-          
-          <Route path="/editprofile/:id" element={<EditProfile />} />
-          <Route path="/addresses" element={<><Navbar/><Addresses /></>} />
+          <Route path="/profile/edit" element={<EditProfile />} />
+          <Route
+            path="/addresses"
+            element={
+              <>
+                <Navbar />
+                <Addresses />
+              </>
+            }
+          />
           <Route path="/address/add" element={<AddAddress />} />
           <Route path="/address/edit/:id" element={<EditAddresses />} />
 

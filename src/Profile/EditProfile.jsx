@@ -7,6 +7,7 @@ export const EditProfile = () => {
     email: "",
     phone: "",
     bio: "",
+    role: "",
   });
 
   const navigate = useNavigate();
@@ -101,7 +102,7 @@ export const EditProfile = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
-                    d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2v10a2 2 0 002 2z"
+                    d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
                 Email
@@ -129,7 +130,7 @@ export const EditProfile = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.2 3.6a1 1 0 01-.27 1.05L8.4 9.6a16 16 0 006 6l1.27-1.76a1 1 0 011.05-.27l3.6 1.2a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.16 21 3 14.84 3 7V5z"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.2 3.6a1 1 0 01-.27 1.05L8.4 9.6a16 16 0 006 6l1.27-1.76a1 1 0 011.05-.27l3.6 1.2a2 2 0 012 2v2a2 2 0 01-2 2h-1C9.16 21 3 14.84 3 7V5z"
                   />
                 </svg>
                 Phone
@@ -171,6 +172,38 @@ export const EditProfile = () => {
                 className="w-full px-4 py-3 text-sm text-slate-800 bg-slate-50 border border-slate-200 rounded-xl outline-none transition-all duration-200 focus:bg-white focus:border-[#E23744] focus:ring-4 focus:ring-red-100 resize-none placeholder:text-slate-400"
                 placeholder="Tell something about yourself..."
               />
+            </div>
+
+            <div>
+              <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                <svg
+                  className="w-4 h-4 text-[#E23744]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-4z"
+                  />
+                </svg>
+                Role
+              </label>
+
+              <select
+                name="role"
+                value={formData.role}
+                onChange={handleChange}
+                className="w-full px-4 py-3 text-sm text-slate-800 bg-slate-50 border border-slate-200 rounded-xl outline-none transition-all duration-200 focus:bg-white focus:border-[#E23744] focus:ring-4 focus:ring-red-100"
+              >
+                <option value="">Select your role</option>
+                <option value="Admin">Admin</option>
+                <option value="User">Customer</option>
+                <option value="Manager">Delivery Patner</option>
+                <option value="Manager">Onwer</option>
+              </select>
             </div>
 
             <div className="flex gap-3 pt-2">

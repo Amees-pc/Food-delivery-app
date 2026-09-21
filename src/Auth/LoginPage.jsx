@@ -1,17 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 export const Login = () => {
   const handleGoogleLogin = () => {
-    window.location.href =
-      "https://m3jf8wkn-8080.devtunnels.ms/oauth2/authorization/google";
+    window.location.href = " https://m3jf8wkn-8080.inc1.devtunnels.ms/login";
   };
 
   return (
     <div className="min-h-screen font-sans">
-     
-
       <div className=" top-16  left-0 right-0 bottom-0 overflow-hidden">
         <img
           src="/images-unsplash.jpg"
@@ -118,7 +114,7 @@ export const Login = () => {
               </button>
 
               <p className="mt-6 text-center text-sm text-slate-500">
-                Don't have an account?{" "}
+                Don't have an account?
                 <Link
                   to="/register"
                   className="font-semibold text-[#E23744] transition-colors hover:text-[#B91C2B] hover:underline"
@@ -138,4 +134,4 @@ export const Login = () => {
   );
 };
 
-export default Login
+export default Login;

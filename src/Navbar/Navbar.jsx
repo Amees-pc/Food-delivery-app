@@ -1,20 +1,21 @@
 import React from "react";
 
-import { FaShoppingCart } from "react-icons/fa";
 
 function Navbar() {
   return (
     <nav className="gap-6 pb-1 flex items-center pt-3 px-7">
       <div className="navbar-logo" style={{ color: "brown" }}>
         <p className="mx-4" style={{ fontSize: "34px", fontWeight: "bold" }}>
-         Taaj Food
+          Taaj Food
         </p>
       </div>
 
-     
-       <input type="text" className="border w-[400px] py-2 outline-none rounded-md px-2 border-gray-300  " placeholder="
-       search for food or restauraunts" />
-     
+      <input
+        type="text"
+        className="border w-[400px] py-2 outline-none rounded-md px-2 border-gray-300  "
+        placeholder="
+       search for food or restauraunts"
+      />
 
       <div className="flex gap-7">
         <a
@@ -47,26 +48,31 @@ function Navbar() {
         >
           Address
         </a>
-
-          <a
+{/* 
+        <a
           href="/login"
           style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           Log in
-        </a>
+        </a> */}
       </div>
-       <a
-          href="/register"
-          style={{  fontSize: "18px", fontWeight: "bold" }}
-          className="bg-red-400 rounded-md px-2 py-2 ml-4 text-white"
-        >
-          Sign up
-        </a>
-      <div className="navbar-auth">
-      
+      <a
+        href="/login"
+        style={{ fontSize: "18px", fontWeight: "bold" }}
+        className="bg-red-400 rounded-md px-2 py-2 ml-4 text-white"
+      >
+        Sign in
+      </a>
+      <a
+        href="/register"
+        style={{ fontSize: "18px", fontWeight: "bold" }}
+        className="bg-red-400 rounded-md px-2 py-2 ml-4 text-white"
+      >
+        Sign up
+      </a>
+      <div className="navbar-auth"></div>
 
-       
-      </div>
+   
     </nav>
   );
 }

@@ -1,9 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Login = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get("token");
+
+    if (token) {
+      localStorage.setItem("token", token);
+      navigate("/");
+    }
+  }, [navigate]);
+
   const handleGoogleLogin = () => {
-    window.location.href = " https://m3jf8wkn-8080.inc1.devtunnels.ms/login";
+    window.location.href =
+      "https://m3jf8wkn-8080.inc1.devtunnels.ms/oauth2/authorization/google";
   };
 
   return (

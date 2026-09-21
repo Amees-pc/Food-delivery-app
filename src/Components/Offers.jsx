@@ -166,7 +166,12 @@ const Offers = () => {
 
                 <h2 className="text-2xl font-bold text-red-600">$1.00 OFF</h2>
                 <p className="mt-2 text-sm text-gray-700">
-                  On orders above <span className="font-semibold mt-2 text-red-500">  <br />$5.00</span>
+                  On orders above{" "}
+                  <span className="font-semibold mt-2 text-red-500">
+                    {" "}
+                    <br />
+                    $5.00
+                  </span>
                 </p>
 
                 <button className="mt-2 bg-white px-3 py-2 rounded-lg text-sm font-bold text-red-600 shadow-lg">
@@ -211,7 +216,10 @@ const Offers = () => {
                   Combo Deals
                 </h2>
 
-                <p className="mt-2 text-sm text-gray-700">Starting at  <span className="text-red-500 text-lg font-bold">$2</span></p>
+                <p className="mt-2 text-sm text-gray-700">
+                  Starting at{" "}
+                  <span className="text-red-500 text-lg font-bold">$2</span>
+                </p>
                 <button className="mt-5 bg-white px-3 py-2 rounded-lg text-sm font-bold text-red-600 shadow-lg">
                   Order Now
                 </button>

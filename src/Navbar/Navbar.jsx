@@ -1,10 +1,14 @@
-import React from "react";
-
+import React, { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 
 function Navbar() {
   const loc = useLocation();
+  const token = localStorage.getItem('token')
+  const[check,setCheck]=useState(token)
+  console.log(check);
+  
   return (
     <nav className="gap-6 pb-1 flex items-center pt-3 px-7">
       <div className="navbar-logo" style={{ color: "brown" }}>
@@ -44,6 +48,7 @@ function Navbar() {
         </a>
         <a
           href="/about"
+           className={`${loc.pathname == "/about" ? "border-b-2 border-red-400 text-red-400" : "none"}`}
           style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           About
@@ -78,6 +83,15 @@ function Navbar() {
         Sign up
       </a>
       <div className="navbar-auth"></div>
+
+      <div className="flex item-centre gap-8">
+        <a href="/Mycart">
+        <FaShoppingCart size={26}/></a>
+
+      <a href="/profile">
+        <FaUserCircle size={33} color="red"/></a>
+
+      </div>
     </nav>
   );
 }

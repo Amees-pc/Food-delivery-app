@@ -201,8 +201,9 @@ export const RestaurauntPage = () => {
             />
           </div>
           <div className="p-2 ">
-            <div className="flex pb-2 ">
+            <div className="flex pb-2 justify-between ">
               <div className="font-semibold text-xl ">Sushi</div>
+              <div className='text-red-700 text-lg'>$3.00</div>
             </div>
             
              <div className='text-gray-500 '>Layers Of Sponge, Chocolate Cream And Mouth Melting Truffle Sauce</div>
@@ -221,8 +222,9 @@ export const RestaurauntPage = () => {
             />
           </div>
           <div className="p-2 ">
-            <div className="flex pb-2 ">
+            <div className="flex pb-2 justify-between ">
               <div className="font-semibold text-xl ">Pizza</div>
+              <div className='text-red-700 text-lg'>$1.80</div>
             </div>
             
              <div className='text-gray-500 '>Layers Of Sponge, Chocolate Cream And Mouth Melting Truffle Sauce</div>
@@ -241,8 +243,9 @@ export const RestaurauntPage = () => {
             />
           </div>
           <div className="p-2 ">
-            <div className="flex pb-2 ">
+            <div className="flex pb-2 justify-between ">
               <div className="font-semibold text-xl ">White sauce Pasta</div>
+              <div className='text-red-700 text-lg'>$2.00</div>
             </div>
             
              <div className='text-gray-500 '>Layers Of Sponge, Chocolate Cream And Mouth Melting Truffle Sauce</div>
@@ -261,8 +264,9 @@ export const RestaurauntPage = () => {
             />
           </div>
           <div className="p-2 pl-3 ">
-            <div className="flex pb-2 ">
+            <div className="flex pb-2 justify-between ">
               <div className="font-semibold text-xl ">Global Fussion</div>
+              <div className='text-red-700 text-lg'>$2.72</div>
             </div>
             
              <div className='text-gray-500 '>Layers Of Sponge, Chocolate Cream And Mouth Melting Truffle Sauce</div>

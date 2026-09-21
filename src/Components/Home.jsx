@@ -413,7 +413,7 @@ const Home = () => {
                   Save more, Eat more
                 </h3>
 
-                <button className="mt-5 bg-white px-5 py-2 rounded-lg text-base font-bold text-red-600 shadow-lg">
+                <button onClick={handleNavigation2} className="mt-5 bg-white px-5 py-2 rounded-lg text-base font-bold text-red-600 shadow-lg">
                   Order Now
                 </button>
 
@@ -443,7 +443,7 @@ const Home = () => {
                   breaking the bank
                 </p>
 
-                <button className="mt-3 bg-white px-3 py-2 rounded-lg text-sm font-bold text-red-600 shadow-lg">
+                <button onClick={handleNavigation2} className="mt-3 bg-white px-3 py-2 rounded-lg text-sm font-bold text-red-600 shadow-lg">
                   Order Now
                 </button>
 

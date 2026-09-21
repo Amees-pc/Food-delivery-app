@@ -40,9 +40,9 @@ const Home = () => {
   }
   return (
     <>
-      <div className="w-100vw ml-7 min-h-screen ">
+      <div className="w-full ml-7 min-h-screen ">
 
-        <section className="flex mt-1 ml-9 items-center">
+        <section className=" w-full flex mt-1 ml-9 items-center">
 
           <div>
 
@@ -154,7 +154,7 @@ const Home = () => {
           </p>
 
 
-          <div className="flex gap-13">
+          <div className="w-full flex gap-13">
 
             <div className="text-center">
               <img

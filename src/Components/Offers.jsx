@@ -374,7 +374,7 @@ const Offers = () => {
         </h2>
         <p className="mt-2 text-sm text-gray-600">Great Taste, greater value</p>
 
-        <div className="w-347 flex gap-7 mt-7 ">
+        <div className="w-full flex gap-7 mt-7 ">
           <div className="h-42 flex w-90 shadow-2xl rounded-2xl overflow-hidden">
             <div className="w-55 h-50">
               <img src={pizzaComboImg} alt="" className="h-full object-cover" />

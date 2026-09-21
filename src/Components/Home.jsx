@@ -40,7 +40,7 @@ const Home = () => {
   }
   return (
     <>
-      <div className="w-full ml-7">
+      <div className="w-100vw ml-7 h-100vh ">
 
 
         <section className="flex mt-1 ml-9 items-center">

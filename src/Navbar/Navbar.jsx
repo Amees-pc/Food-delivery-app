@@ -1,7 +1,10 @@
 import React from "react";
 
+import { FaShoppingCart } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 function Navbar() {
+  const loc = useLocation();
   return (
     <nav className="gap-6 pb-1 flex items-center pt-3 px-7">
       <div className="navbar-logo" style={{ color: "brown" }}>
@@ -20,18 +23,21 @@ function Navbar() {
       <div className="flex gap-7">
         <a
           href="/home"
+          className={`${loc.pathname == "/home" ? "border-b-2 border-red-400 text-red-400" : "none"}`}
           style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           Home
         </a>
         <a
           href="/list"
+          className={`${loc.pathname == "/list" ? "border-b-2 border-red-400 text-red-400" : "none"}`}
           style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           Restaurants
         </a>
         <a
           href="/offers"
+          className={`${loc.pathname == "/offers" ? "border-b-2 border-red-400 text-red-400" : "none"}`}
           style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           Offers
@@ -44,11 +50,12 @@ function Navbar() {
         </a>
         <a
           href="/addresses"
+          className={`${loc.pathname == "/addresses" ? "border-b-2 border-red-400 text-red-400" : "none"}`}
           style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           Address
         </a>
-{/* 
+        {/* 
         <a
           href="/login"
           style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
@@ -71,8 +78,6 @@ function Navbar() {
         Sign up
       </a>
       <div className="navbar-auth"></div>
-
-   
     </nav>
   );
 }

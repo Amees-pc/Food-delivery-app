@@ -15,6 +15,7 @@ import { Addresses } from "./address/Addresses";
 import { AddAddress } from "./address/AddAddresses";
 import { EditAddresses } from "./address/EditAddresses";
 import { Dashboard } from "./Dashboard";
+import MyCart from "./Components/MyCart";
 function App() {
   return (
     <>
@@ -61,6 +62,15 @@ function App() {
               <>
                 <Navbar />
                 <Home />
+              </>
+            }
+          />
+           <Route
+            path="/Mycart"
+            element={
+              <>
+                <Navbar />
+                <MyCart />
               </>
             }
           />

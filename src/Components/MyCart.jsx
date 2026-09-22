@@ -260,10 +260,10 @@ const MyCart = () => {
 
 </div>
     </div>
-<div className='mt-6 flex gap-30 bg-pink-50 px-30 pt-3 pb-6'>
+<div className='mt-8 flex gap-30 bg-pink-50 px-30 pt-5 pb-6'>
     {/* 1 */}
     <div className='flex gap-3'>
-     <div className='text-red-500 pt-2'><FaMotorcycle size={45}/></div>
+     <div className='text-red-500 pt-1'><FaMotorcycle size={45}/></div>
      <div>
         <div className='text-xl font-bold'>Fast Delivery</div>
         <div className='text-gray-500'>On time, every time</div>
@@ -273,7 +273,7 @@ const MyCart = () => {
     {/* 2 */}
 
     <div className='flex gap-3'>
-     <div className='text-red-500 pt-2'><ShieldCheck size={45}/></div>
+     <div className='text-red-500 pt-1'><ShieldCheck size={45}/></div>
      <div>
         <div className='text-xl font-bold'>Safe & Secure </div>
         <div className='text-gray-500'>100% secure payments</div>
@@ -283,7 +283,7 @@ const MyCart = () => {
     {/* 3 */}
 
     <div className='flex gap-3'>
-     <div className='text-red-500 pt-2'><Leaf size={45}/></div>
+     <div className='text-red-500 pt-1'><Leaf size={45}/></div>
      <div>
         <div className='text-xl font-bold'>Fresh & Hygenic </div>
         <div className='text-gray-500'>Quality food, always</div>
@@ -293,7 +293,7 @@ const MyCart = () => {
     {/* 4 */}
  
  <div className='flex gap-3'>
-     <div className='text-red-500 pt-2'><FaHeadset size={45}/></div>
+     <div className='text-red-500 pt-1'><FaHeadset size={45}/></div>
      <div>
         <div className='text-xl font-bold'>24/7 Support </div>
         <div className='text-gray-500'>We're here to help</div>

@@ -108,7 +108,7 @@ const MyCart = () => {
             </div>
  
  <div className='flex justify-center items-center'>
-    <div className='flex justify-between rounded-md w-30  px-2 py-1 gap-4 bg-gray-50'>
+    <div className='flex justify-between rounded-md w-30  px-2 py-1 gap-4  bg-gray-50'>
      <button className='text-lg' onClick={()=>{setitems((prev)=>({...prev,i2:prev.i2-1})); remove("i2") }}>-</button>
     <div className='text-lg'>{items.i2}</div>
     <button className='text-lg'  onClick={()=>{setitems((prev)=>({...prev,i2:prev.i2+1})) ; totalcost("i2")}}>+</button>
@@ -229,16 +229,16 @@ const MyCart = () => {
     <div className='rounded-xl'>
 
         <div className=' border-b border-gray-300  flex justify-between'>
-       <button className='flex' onClick={()=>{setpayment("card")}}><div className={`p-2 font-bold ${payment=="card"?"text-red-600":""}`}>O</div>
+       <button className='flex' onClick={()=>{setpayment("cod")}}><div className={`p-2 font-bold ${payment=="cod"?"text-red-600":""}`}>O</div>
        <div className='p-2 '>
-        <div className='font-bold text-sm'>Credit / Debit Card</div>
+        <div className='font-bold text-sm'>Cash on Delivery</div>
        </div>
        </button>
        <div className=' pt-2 text-red-600'> <Wallet size={22}/></div>
         </div>
 
          <div className=' border-b border-gray-300  flex justify-between'>
-       <button className='flex' onClick={()=>{setpayment("card")}}><div className={`p-2 font-bold ${payment=="card"?"text-red-600":""}`}>O</div>
+       <button className='flex' onClick={()=>{setpayment("upi")}}><div className={`p-2 font-bold ${payment=="upi"?"text-red-600":""}`}>O</div>
        <div className='p-2 '>
         <div className='font-bold text-sm'>UPI</div>
        </div>

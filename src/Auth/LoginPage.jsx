@@ -6,7 +6,7 @@ export const Login = () => {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const token = params.get("token");
+    const token = params.get("accessToken");
 
     if (token) {
       localStorage.setItem("token", token);

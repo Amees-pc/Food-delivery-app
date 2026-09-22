@@ -18,6 +18,7 @@ import { Dashboard } from "./Dashboard";
 import MyCart from "./Components/MyCart";
 import About from "./Components/About";
 import Menu from "./Components/Ownerpages/Menu";
+import ProfilePage from "./Profile/ProfilePage";
 function App() {
   return (
     
@@ -87,6 +88,18 @@ function App() {
               </>
             }
           />
+ 
+ 
+          <Route
+            path="/myprofile"
+            element={
+              <>
+                <Navbar />
+                <ProfilePage />
+              </>
+            }
+          />
+
           <Route
             path="/about"
             element={

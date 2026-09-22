@@ -16,6 +16,7 @@ import { AddAddress } from "./address/AddAddresses";
 import { EditAddresses } from "./address/EditAddresses";
 import { Dashboard } from "./Dashboard";
 import MyCart from "./Components/MyCart";
+import About from "./Components/About";
 function App() {
   return (
     
@@ -85,6 +86,15 @@ function App() {
               </>
             }
           />
+          <Route
+            path="/about"
+            element={
+              <>
+                <Navbar />
+                <About />
+              </>
+            }
+          />
 
           <Route
             path="/login"
@@ -95,8 +105,7 @@ function App() {
             }
           />
 
-          <Route
-            path="/register"
+          <Route path="/register"
             element={
               <>
                 <Register />
@@ -104,9 +113,7 @@ function App() {
             }
           />
 
-          <Route
-            path="/profile"
-            element={
+          <Route path="/profile" element={
               <>
                 <Navbar />
                 <Profile />

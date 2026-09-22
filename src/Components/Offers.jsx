@@ -495,7 +495,7 @@ const Offers = () => {
       </section>
 
       <section className="mx-10 mt-13 mb-10">
-        <div className="w-full h-55 flex px-10 py-10 shadow-xl rounded-xl bg-red-200">
+        <div className="w-full h-59 flex px-10 py-8 shadow-xl rounded-xl bg-red-200">
           <div className="mt-2">
             <h2 className="text-4xl font-semibold text-black-700">
               Hungry? <br /> Great Offers are just a click away!
@@ -513,7 +513,9 @@ const Offers = () => {
             />
           </div>
 
-          <div> <button className="mx-6 px-7 py-4 my-18 text-white rounded-xl bg-red-600">Order Now</button></div>
+          <div>   <button className="h-15 mt-10 mr-17 w-57 px-8 rounded-xl text-lg bg-red-600 text-white">
+              Explore Restaurants
+            </button></div>
          
         </div>
       </section>

@@ -1,6 +1,8 @@
 import React from "react";
 import aboutImg from "../assets/about1.png";
 import aboutImg2 from "../assets/about2.png";
+import joinUsImg from "../assets/join-us-banner.png";
+
 import {
   FaUtensils,
   FaMapMarkerAlt,
@@ -141,28 +143,35 @@ const About = () => {
         </div>
       </div>
 
-      <section className="mx-10 mt-13 mb-10">
-  <div className="w-full h-65 flex py-6 shadow-xl rounded-xl bg-red-200">
-        <div className="ml-20 mt-7">
-          <h2 className="text-2xl text-red-600 ">JOIN US </h2>
-          <h2 className="text-4xl mt-2">
-            Let's Make Food  <br /> Experiences{" "}
-            <span className="text-4xl text-red-800">Better</span>
+
+  <div className="w-full">
+ <section
+  className="relative h-[300px] mx-8 rounded-2xl my-8 overflow-hidden mt-10 bg-center bg-no-repeat"
+  style={{
+    backgroundImage: `url(${joinUsImg})`,
+    backgroundSize: "105% 165%",
+  }}
+>
+        <div className="absolute left-10 top-10">
+          <h2 className="text-4xl font-bold text-gray-900 leading-tight">
+            Let's Make Food
+            <br />
+            Experiences <span className="text-red-600">Better</span>
           </h2>
-          <p className="text-lg mt-4 text-gray-800">
-            Be a part of our journey towards a tastier, happier tomarrow
-        
+
+          <p className="mt-4 text-gray-600 text-lg">
+            Be a part of our journey towards a tastier,
+            <br />
+            happier tomorrow.
           </p>
 
-         
-        </div>
-         <button className="h-15  mt-20 ml-100 px-5 rounded-xl text-lg bg-red-600 text-white">
-            Explore Restaurants
+          <button className="mt-5 px-6 py-3 bg-red-600 text-white rounded-xl text-lg">
+            Be a Part of Our Story →
           </button>
-      </div>
+        </div>
       </section>
-
-    
+  </div>
+     
     </div>
   );
 };

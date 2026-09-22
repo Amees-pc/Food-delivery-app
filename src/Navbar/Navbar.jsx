@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle, } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 
 function Navbar() {
@@ -88,7 +88,7 @@ function Navbar() {
         <a href="/Mycart">
         <FaShoppingCart size={26}/></a>
 
-      <a href="/profile">
+      <a href="/myprofile">
         <FaUserCircle size={33} color="red"/></a>
 
       </div>

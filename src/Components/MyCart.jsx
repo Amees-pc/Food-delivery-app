@@ -68,7 +68,7 @@ const MyCart = () => {
     <div className='text-gray-500 text-sm'>3 items in your cart</div></div>
   </div>
   <div className='flex gap-6 mt-6'>
-    <div className='rounded-xl p-2 shadow-[0_0_15px_rgba(0,0,0,0.3)]  '>
+    <div className='rounded-xl p-2 shadow-[0_0_15px_rgba(0,0,0,0.3)] '>
         {/* 1 */}
         <div className='p-2 border-b border-gray-200 flex justify-between w-2xl'>
 

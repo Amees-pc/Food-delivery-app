@@ -137,6 +137,7 @@ function App() {
 
           <Route path="/menu-management" element={
               <>
+                 <Navbar />
                 <Menu />
               </>
             }

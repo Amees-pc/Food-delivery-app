@@ -78,7 +78,7 @@ function Navbar() {
       <a
         href="/register"
         style={{ fontSize: "18px", fontWeight: "bold" }}
-        className="bg-red-400 rounded-md px-2 py-2 ml-4 text-white"
+        className="bg-black rounded-md px-2 py-2 ml-4 text-white"
       >
         Sign up
       </a>

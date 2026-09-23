@@ -1,13 +1,13 @@
 import React from 'react'
 import Profileimg from "../assets/ProfileBanner.png";
 import burgerComboImg from "../assets/burger-combo.png";
-import {ShoppingCart, Trash2 , MapPin,CreditCard, Wallet, Search, Home, ChevronRight,Truck, ShieldCheck,Leaf, Headphones} from "lucide-react";
-
+import {ShoppingCart, History, Trash2 , MapPin,CreditCard, Wallet, Search, Home, ChevronRight,Truck, ShieldCheck,Leaf, Headphones} from "lucide-react";
+import Tabakh from "../assets/assets/Tabakh.webp";
 const ProfilePage = () => {
   return (
 //     <div className=' rounded-md h-50 bg-center bg-no-repeat my-2 relative p-4 mx-4' style={{backgroundImage: `URL(${Profileimg})`,
 // backgroundSize: "105% 165%"}}>ProfilePage</div>
-<div className='min-h-screen px-15'>
+<div className='h-screen px-15'>
     <div className='bg-cover bg-center bg-no-repeat p-8'
     style={{backgroundImage: `url(${Profileimg})`}}>
        <div className='flex gap-8'>
@@ -120,7 +120,67 @@ const ProfilePage = () => {
      </div>
      
     </div>
-ghgf
+
+{/* 2nd big row */}
+
+<div className=' mt-4 '>
+<div className='rounded-xl  shadow-[0_0_6px_rgba(0,0,0,0.3)] p-4 w-fit  '>
+
+ <div className='mb-3 flex gap-4'>
+   <div className='text-red-600 '> <History size={22}/></div>
+  <div className='font-bold text-xl '>Recent orders</div>
+ </div>
+ <div className='grid grid-cols-6 w-[60vw]'>
+{/* 1 */}
+<div className='col-span-2 flex gap-4 border-b border-gray-300 pb-2'>
+  <img src={Tabakh} alt="" className='h-20 w-20 rounded'/>
+  <div className=' pt-3'>
+    <div className='font-bold text-2xl'>Chicken Grill</div>
+    <div className='text-gray-500 text-sm'>Tabakh</div>
+  </div>
+</div>
+
+<div className='col-span-2  border-b border-gray-300 pb-2'>
+  <div className='flex pt-3'><div className='font-bold text-gray-500 text-2xl'>$6.24</div></div>
+</div>
+<div className='col-span-2  border-b border-gray-300 pb-2'>
+  <div className='flex pt-3'><div className='bg-red-300 text-red-600   font-bold  py-1 px-7 rounded-xl  text-xl'>Cancelled</div></div>
+</div>
+{/* 2 */}
+<div className='col-span-2 flex gap-4 border-b border-gray-300 py-2'>
+  <img src={Tabakh} alt="" className='h-20 w-20 rounded'/>
+  <div className=' pt-3'>
+    <div className='font-bold text-2xl'>Chicken Grill</div>
+    <div className='text-gray-500 text-sm'>Tabakh</div>
+  </div>
+</div>
+
+<div className='col-span-2  border-b border-gray-300 py-2'>
+  <div className='flex pt-3'><div className='font-bold text-gray-500 text-2xl'>$6.24</div></div>
+</div>
+<div className='col-span-2  border-b border-gray-300 py-2'>
+  <div className='flex pt-3'><div className='bg-red-300 text-red-600   font-bold  py-1 px-7 rounded-xl  text-xl'>Cancelled</div></div>
+</div>
+{/* 3 */}
+<div className='col-span-2 flex gap-4 border-b border-gray-300 py-2'>
+  <img src={Tabakh} alt="" className='h-20 w-20 rounded'/>
+  <div className=' pt-3'>
+    <div className='font-bold text-2xl'>Chicken Grill</div>
+    <div className='text-gray-500 text-sm'>Tabakh</div>
+  </div>
+</div>
+
+<div className='col-span-2  border-b border-gray-300 py-2'>
+  <div className='flex pt-3'><div className='font-bold text-gray-500 text-2xl'>$6.24</div></div>
+</div>
+<div className='col-span-2  border-b border-gray-300 py-2'>
+  <div className='flex pt-3'><div className='bg-red-300 text-red-600   font-bold  py-1 px-7 rounded-xl  text-xl'>Cancelled</div></div>
+</div>
+
+ </div>
+</div>
+</div>
+
 </div>
   )
 }

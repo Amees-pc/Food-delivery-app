@@ -17,6 +17,7 @@ import { EditAddresses } from "./address/EditAddresses";
 import { Dashboard } from "./Dashboard";
 import MyCart from "./Components/MyCart";
 import About from "./Components/About";
+import Menu from "./Components/Ownerpages/Menu";
 import ProfilePage from "./Profile/ProfilePage";
 function App() {
   return (
@@ -130,6 +131,13 @@ function App() {
               <>
                 <Navbar />
                 <Profile />
+              </>
+            }
+          />
+
+          <Route path="/menu-management" element={
+              <>
+                <Menu />
               </>
             }
           />

@@ -74,6 +74,12 @@ function Navbar() {
       <div className="flex item-centre gap-8">
         <a href="/Mycart">
           <FaShoppingCart size={26} />
+
+          <FaShoppingCart size={26} />
+        </a>
+
+        <a href="/myprofile">
+          <FaUserCircle size={33} color="red" />
         </a>
 
         <a href="/profile">

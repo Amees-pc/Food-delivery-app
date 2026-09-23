@@ -20,7 +20,7 @@ const MyCart = () => {
     const [payment,setpayment]=useState("")
     const [items,setitems]=useState({i1:1,i2:1,i3:1,i4:1})
     const [cost,setcost]=useState(9)
-  const [count,setcount]=useState(3)
+  const [count,setcount]=useState(4)
     let totalcost=(i)=>{
         
            if (i=="i1") {
@@ -119,7 +119,7 @@ const MyCart = () => {
  
  <div className='flex justify-center items-center'>
     <div className='flex justify-between rounded-md w-30  px-2 py-1 gap-4  bg-gray-50'>
-     <button className='text-lg' onClick={()=>{items.i1>0?remove("i2"):null }}>-</button>
+     <button className='text-lg' onClick={()=>{items.i2>0?remove("i2"):null }}>-</button>
     <div className='text-lg'>{items.i2}</div>
     <button className='text-lg'  onClick={()=>{setitems((prev)=>({...prev,i2:prev.i2+1})) ; totalcost("i2")}}>+</button>
  </div>
@@ -144,7 +144,7 @@ const MyCart = () => {
  
  <div className='flex justify-center items-center'>
     <div className='flex justify-between rounded-md w-30  px-2 py-1 gap-4 bg-gray-50'>
-     <button className='text-lg' onClick={()=>{items.i1>0?remove("i3"):null}}>-</button>
+     <button className='text-lg' onClick={()=>{items.i3>0?remove("i3"):null}}>-</button>
     <div className='text-lg'>{items.i3}</div>
     <button className='text-lg'  onClick={()=>{setitems((prev)=>({...prev,i3:prev.i3+1})); totalcost("i3")}}>+</button>
  </div>
@@ -170,7 +170,7 @@ const MyCart = () => {
  
  <div className='flex justify-center items-center'>
     <div className='flex justify-between rounded-md w-30  px-2 py-1 gap-4 bg-gray-50'>
-    <button className='text-lg' onClick={()=>{items.i1>0?remove("i4"):null }}>-</button>
+    <button className='text-lg' onClick={()=>{items.i4>0?remove("i4"):null }}>-</button>
     <div className='text-lg'>{items.i4}</div>
     <button className='text-lg'  onClick={()=>{setitems((prev)=>({...prev,i4:prev.i4+1})); totalcost("i4") }}>+</button>
  </div>

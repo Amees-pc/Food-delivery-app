@@ -5,10 +5,10 @@ import { useLocation } from "react-router-dom";
 
 function Navbar() {
   const loc = useLocation();
-  const token = localStorage.getItem('token')
-  const[check,setCheck]=useState(token)
+  const token = localStorage.getItem("token");
+  const [check, setCheck] = useState(token);
   console.log(check);
-  
+
   return (
     <nav className="gap-6 pb-1 flex items-center pt-3 px-7">
       <div className="navbar-logo" style={{ color: "brown" }}>
@@ -48,7 +48,7 @@ function Navbar() {
         </a>
         <a
           href="/about"
-           className={`${loc.pathname == "/about" ? "border-b-2 border-red-400 text-red-400" : "none"}`}
+          className={`${loc.pathname == "/about" ? "border-b-2 border-red-400 text-red-400" : "none"}`}
           style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
           About
@@ -60,37 +60,25 @@ function Navbar() {
         >
           Address
         </a>
-        {/* 
-        <a
-          href="/login"
-          style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
-        >
-          Log in
-        </a> */}
       </div>
       <a
-        href="/login"
+        href="/"
         style={{ fontSize: "18px", fontWeight: "bold" }}
         className="bg-red-400 rounded-md px-2 py-2 ml-4 text-white"
       >
         Sign in
       </a>
-      <a
-        href="/register"
-        style={{ fontSize: "18px", fontWeight: "bold" }}
-        className="bg-black rounded-md px-2 py-2 ml-4 text-white"
-      >
-        Sign up
-      </a>
+
       <div className="navbar-auth"></div>
 
       <div className="flex item-centre gap-8">
         <a href="/Mycart">
-        <FaShoppingCart size={26}/></a>
+          <FaShoppingCart size={26} />
+        </a>
 
-      <a href="/profile">
-        <FaUserCircle size={33} color="red"/></a>
-
+        <a href="/profile">
+          <FaUserCircle size={33} color="red" />
+        </a>
       </div>
     </nav>
   );

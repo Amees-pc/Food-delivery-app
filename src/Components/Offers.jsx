@@ -24,10 +24,10 @@ import offerImage from "../assets/offers.png";
 import { useNavigate } from "react-router-dom";
 
 const Offers = () => {
-  const naviagate = useNavigate()
-  const handleNavigation=()=>{
-    naviagate(`/list`)
-  }
+  const naviagate = useNavigate();
+  const handleNavigation = () => {
+    naviagate(`/list`);
+  };
   return (
     <div>
       <section className="w-full px-8 py-3 flex bg-pink-100 h-[460px] overflow-hidden">
@@ -518,10 +518,15 @@ const Offers = () => {
             />
           </div>
 
-          <div>   <button onClick={handleNavigation} className="h-15 mt-15 mr-17 w-57 px-8 rounded-xl text-lg bg-red-600 text-white">
+          <div>
+            {" "}
+            <button
+              onClick={handleNavigation}
+              className="h-15 mt-15 mr-17 w-57 px-8 rounded-xl text-lg bg-red-600 text-white"
+            >
               Explore Restaurants
-            </button></div>
-         
+            </button>
+          </div>
         </div>
       </section>
     </div>

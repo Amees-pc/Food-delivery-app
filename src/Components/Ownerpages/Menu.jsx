@@ -2,6 +2,7 @@ import React from "react";
 import chickenBiryaniImg from "../../assets/chickenBiryani.png";
 import gulabJamunImg from "../../assets/gulab-jamun.png";
 import butterChickenImg from "../../assets/butter-chicken.png";
+import menuImg from "../../assets/menu-management.png";
 import { FaEdit, FaTrash, FaChevronDown, FaImage } from "react-icons/fa";
 
 const Menu = () => {
@@ -26,7 +27,7 @@ const Menu = () => {
         </div>
 
 
-        <div className="flex h-[calc(100vh-220px)] w-full gap-6 mt-6">
+        <div className="flex h-[calc(100vh-70px)] w-full gap-6 mt-6">
 
           <div className="flex-1 min-w-0 overflow-y-auto">
 
@@ -406,12 +407,22 @@ const Menu = () => {
                <label className="mb-1 font-semibold" htmlFor="">
                Image <span className="text-red-500">*</span>
               </label>
-              <label className="flex items-center justify-center h-24 border border-dashed border-gray-300" htmlFor="">
+              <label className="flex flex-col items-center justify-center mt-1 h-24 border border-dashed border-gray-400 rounded-lg" htmlFor="">
                 <FaImage size={24}/>
+                <span className="text-sm mt-1 text-gray-600">Click to upload an Image</span>
+                <span className="text-sm text-gray-600">PNG, JPG (Max 2MB)</span>
               </label>
 
             </div>
 
+
+<div className="w-full flex mt-6 justify-center items-center">
+   <button className="w-87 h-10 rounded-md bg-red-600 text-white text-lg">Add Item</button>
+
+
+</div>
+
+         
 
           </form>
 

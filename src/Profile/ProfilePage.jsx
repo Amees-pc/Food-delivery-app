@@ -1,13 +1,13 @@
 import React from 'react'
 import Profileimg from "../assets/ProfileBanner.png";
 import burgerComboImg from "../assets/burger-combo.png";
-import {ShoppingCart, Trash2 , MapPin,CreditCard, Wallet, Search, Home, ChevronRight,Truck, ShieldCheck,Leaf, Headphones} from "lucide-react";
-
+import {ShoppingCart, History, Trash2 , MapPin,CreditCard, Wallet, Search, Home, ChevronRight,Truck, ShieldCheck,Leaf, Headphones} from "lucide-react";
+import Tabakh from "../assets/assets/Tabakh.webp";
 const ProfilePage = () => {
   return (
 //     <div className=' rounded-md h-50 bg-center bg-no-repeat my-2 relative p-4 mx-4' style={{backgroundImage: `URL(${Profileimg})`,
 // backgroundSize: "105% 165%"}}>ProfilePage</div>
-<div className='min-h-screen px-15'>
+<div className='h-screen px-15'>
     <div className='bg-cover bg-center bg-no-repeat p-8'
     style={{backgroundImage: `url(${Profileimg})`}}>
        <div className='flex gap-8'>
@@ -21,48 +21,48 @@ const ProfilePage = () => {
     </div>
 
     <div className='flex mt-8 gap-10'>
-     <div className='rounded-xl shadow-[0_0_6px_rgba(0,0,0,0.3)] p-4  w-[40vw] '>
-      <div className='font-bold text-xl mb-3'>Personal Information</div>
+     <div className='rounded-xl shadow-[0_0_6px_rgba(0,0,0,0.3)] p-4 pl-8  w-[45vw] '>
+      <div className='font-bold text-2xl mb-3'>Personal Information</div>
       <div className=''>
 
       <div className='border-b border-gray-300'>
-        <div className='flex p-2 justify-between  w-[20vw]'>
-       <div className='text-sm text-gray-500'>Full name</div>
-       <div className='text-sm font-bold'>Daniel Rosh</div>
+        <div className='flex p-2 justify-between  w-[35vw]'>
+       <div className='text-xl text-gray-500'>Full name</div>
+       <div className='text-xl font-bold'>Daniel Rosh</div>
       </div>
       </div>
       {/* 2 */}
         <div className='border-b border-gray-300 '>
-          <div className='flex p-2 justify-between  w-[20vw]'>
-       <div className='text-sm text-gray-500'>Email</div>
-       <div className='text-sm font-bold '>Ask23@gmail.com</div>
+          <div className='flex p-2 justify-between  w-[35vw]'>
+       <div className='text-xl text-gray-500'>Email</div>
+       <div className='text-xl font-bold '>Ask23@gmail.com</div>
       </div>
         </div>
       {/* 3 */}
         <div className='border-b border-gray-300'>
-        <div className='flex p-2 justify-between  w-[20vw]'>
-       <div className='text-sm text-gray-500'>Phone</div>
-       <div className='text-sm font-bold '>7415792211</div>
+        <div className='flex p-2 justify-between  w-[35vw]'>
+       <div className='text-xl text-gray-500'>Phone</div>
+       <div className='text-xl font-bold '>7415792211</div>
       </div>
         </div>
       {/* 4 */}
         <div className='border-gray-300 border-b'>
-          <div className='flex p-2 justify-between  w-[20vw]'>
-       <div className='text-sm text-gray-500'>Date of birth</div>
-       <div className='text-sm font-bold '>14 march 2005</div>
+          <div className='flex p-2 justify-between  w-[35vw]'>
+       <div className='text-xl text-gray-500'>Date of birth</div>
+       <div className='text-xl font-bold '>14 march 2005</div>
       </div>
         </div>
       {/* 5 */}
         <div className=''>
-          <div className='flex p-2 justify-between  w-[20vw]'>
-       <div className='text-sm text-gray-500'>Gender</div>
-       <div className='text-sm font-bold'>Male</div>
+          <div className='flex p-2 justify-between  w-[35vw]'>
+       <div className='text-xl text-gray-500'>Gender</div>
+       <div className='text-xl font-bold'>Male</div>
       </div>
         </div>
 
       </div>
      </div> 
-     <div className='rounded-xl shadow-[0_0_6px_rgba(0,0,0,0.3)] p-4  w-[40vw]'>
+     <div className='rounded-xl shadow-[0_0_6px_rgba(0,0,0,0.3)] p-4  w-[45vw]'>
 
      <div className='flex justify-between'>
       <div className='flex gap-3 mb-3'>
@@ -120,7 +120,67 @@ const ProfilePage = () => {
      </div>
      
     </div>
-ghgf
+
+{/* 2nd big row */}
+
+<div className=' mt-4 '>
+<div className='rounded-xl  shadow-[0_0_6px_rgba(0,0,0,0.3)] p-4 w-fit  '>
+
+ <div className='mb-3 flex gap-4'>
+   <div className='text-red-600 '> <History size={22}/></div>
+  <div className='font-bold text-xl '>Recent orders</div>
+ </div>
+ <div className='grid grid-cols-3 w-[43vw]'>
+{/* 1 */}
+<div className='col-span-1 flex gap-4 border-b border-gray-300 pb-2'>
+  <img src={Tabakh} alt="" className='h-20 w-20 rounded'/>
+  <div className=' pt-3'>
+    <div className='font-bold text-2xl'>Chicken Grill</div>
+    <div className='text-gray-500 text-sm'>Tabakh</div>
+  </div>
+</div>
+
+<div className='col-span-1  border-b border-gray-300 pb-2'>
+  <div className='flex pt-3'><div className='font-bold text-gray-500 text-2xl'>$6.24</div></div>
+</div>
+<div className='col-span-1  border-b border-gray-300 pb-2'>
+  <div className='flex pt-3'><div className='bg-red-300 text-red-600   font-bold  py-1 px-7 rounded-xl  text-xl'>Cancelled</div></div>
+</div>
+{/* 2 */}
+<div className='col-span-1 flex gap-4 border-b border-gray-300 py-2'>
+  <img src={Tabakh} alt="" className='h-20 w-20 rounded'/>
+  <div className=' pt-3'>
+    <div className='font-bold text-2xl'>Chicken Grill</div>
+    <div className='text-gray-500 text-sm'>Tabakh</div>
+  </div>
+</div>
+
+<div className='col-span-1  border-b border-gray-300 py-2'>
+  <div className='flex pt-3'><div className='font-bold text-gray-500 text-2xl'>$6.24</div></div>
+</div>
+<div className='col-span-1  border-b border-gray-300 py-2'>
+  <div className='flex pt-3'><div className='bg-red-300 text-red-600   font-bold  py-1 px-7 rounded-xl  text-xl'>Cancelled</div></div>
+</div>
+{/* 3 */}
+<div className='col-span-1 flex gap-4 border-b border-gray-300 py-2'>
+  <img src={Tabakh} alt="" className='h-20 w-20 rounded'/>
+  <div className=' pt-3'>
+    <div className='font-bold text-2xl'>Chicken Grill</div>
+    <div className='text-gray-500 text-sm'>Tabakh</div>
+  </div>
+</div>
+
+<div className='col-span-1  border-b border-gray-300 py-2'>
+  <div className='flex pt-3'><div className='font-bold text-gray-500 text-2xl'>$6.24</div></div>
+</div>
+<div className='col-span-1  border-b border-gray-300 py-2'>
+  <div className='flex pt-3'><div className='bg-red-300 text-red-600   font-bold  py-1 px-7 rounded-xl  text-xl'>Cancelled</div></div>
+</div>
+
+ </div>
+</div>
+</div>
+
 </div>
   )
 }

@@ -7,25 +7,23 @@ import Offers from "./Components/Offers";
 import RestaurauntPage from "./Components/RestaurauntPage";
 import RestaurauntList from "./Components/RestaurauntList";
 
-import Login from "./Auth/LoginPage";
 import Profile from "./Profile/Profile";
-import { Register } from "./Auth/RegisterPage";
+
 import { EditProfile } from "./Profile/EditProfile";
 import { Addresses } from "./address/Addresses";
 import { AddAddress } from "./address/AddAddresses";
 import { EditAddresses } from "./address/EditAddresses";
-import { Dashboard } from "./Dashboard";
+import { Login } from "./Login";
 import MyCart from "./Components/MyCart";
 import About from "./Components/About";
 import Menu from "./Components/Ownerpages/Menu";
 import ProfilePage from "./Profile/ProfilePage";
 function App() {
   return (
-    
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Login />} />
 
           <Route path="/profile/edit" element={<EditProfile />} />
           <Route
@@ -69,7 +67,7 @@ function App() {
               </>
             }
           />
-           <Route
+          <Route
             path="/Mycart"
             element={
               <>
@@ -88,8 +86,7 @@ function App() {
               </>
             }
           />
- 
- 
+
           <Route
             path="/myprofile"
             element={
@@ -110,24 +107,17 @@ function App() {
             }
           />
 
-          <Route
-            path="/login"
-            element={
-              <>
-                <Login />
-              </>
-            }
-          />
-
-          <Route path="/register"
+          {/* <Route path="/register"
             element={
               <>
                 <Register />
               </>
             }
-          />
+          /> */}
 
-          <Route path="/profile" element={
+          <Route
+            path="/profile"
+            element={
               <>
                 <Navbar />
                 <Profile />
@@ -135,7 +125,9 @@ function App() {
             }
           />
 
-          <Route path="/menu-management" element={
+          <Route
+            path="/menu-management"
+            element={
               <>
                  <Navbar />
                 <Menu />

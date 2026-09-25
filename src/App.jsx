@@ -18,14 +18,16 @@ import MyCart from "./Components/MyCart";
 import About from "./Components/About";
 import Menu from "./Components/Ownerpages/Menu";
 import ProfilePage from "./Profile/ProfilePage";
+
+
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />} />
-
-          <Route path="/profile/edit" element={<EditProfile />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/profile/edit/:id" element={<EditProfile />} />
           <Route
             path="/addresses"
             element={
@@ -59,7 +61,7 @@ function App() {
           />
 
           <Route
-            path="/home"
+            path="/"
             element={
               <>
                 <Navbar />

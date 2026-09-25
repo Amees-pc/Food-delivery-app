@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const inputClass =
+  "w-full px-4 py-3 text-sm text-slate-800 bg-slate-50 border border-slate-200 rounded-xl outline-none transition-all duration-200 focus:bg-white focus:border-[#E23744] focus:ring-4 focus:ring-red-100 placeholder:text-slate-400";
+
+const labelClass =
+  "flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2";
+
 export const EditProfile = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
-    bio: "",
     role: "",
   });
 
@@ -52,7 +56,6 @@ export const EditProfile = () => {
 
             <div>
               <h2 className="text-xl font-bold">Edit Profile</h2>
-
               <p className="text-xs text-red-100">
                 Update your personal information
               </p>
@@ -63,7 +66,7 @@ export const EditProfile = () => {
         <div className="p-7">
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+              <label className={labelClass}>
                 <svg
                   className="w-4 h-4 text-[#E23744]"
                   fill="none"
@@ -85,13 +88,13 @@ export const EditProfile = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 text-sm text-slate-800 bg-slate-50 border border-slate-200 rounded-xl outline-none transition-all duration-200 focus:bg-white focus:border-[#E23744] focus:ring-4 focus:ring-red-100 placeholder:text-slate-400"
+                className={inputClass}
                 placeholder="Enter your name"
               />
             </div>
 
             <div>
-              <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+              <label className={labelClass}>
                 <svg
                   className="w-4 h-4 text-[#E23744]"
                   fill="none"
@@ -113,69 +116,13 @@ export const EditProfile = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 text-sm text-slate-800 bg-slate-50 border border-slate-200 rounded-xl outline-none transition-all duration-200 focus:bg-white focus:border-[#E23744] focus:ring-4 focus:ring-red-100 placeholder:text-slate-400"
+                className={inputClass}
                 placeholder="Enter your email"
               />
             </div>
 
             <div>
-              <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
-                <svg
-                  className="w-4 h-4 text-[#E23744]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.2 3.6a1 1 0 01-.27 1.05L8.4 9.6a16 16 0 006 6l1.27-1.76a1 1 0 011.05-.27l3.6 1.2a2 2 0 012 2v2a2 2 0 01-2 2h-1C9.16 21 3 14.84 3 7V5z"
-                  />
-                </svg>
-                Phone
-              </label>
-
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full px-4 py-3 text-sm text-slate-800 bg-slate-50 border border-slate-200 rounded-xl outline-none transition-all duration-200 focus:bg-white focus:border-[#E23744] focus:ring-4 focus:ring-red-100 placeholder:text-slate-400"
-                placeholder="Enter your phone number"
-              />
-            </div>
-
-            <div>
-              <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
-                <svg
-                  className="w-4 h-4 text-[#E23744]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M8 10h8M8 14h5M6 20l-3 1 1-3a8 8 0 111.5 1.5L6 20z"
-                  />
-                </svg>
-                Bio
-              </label>
-
-              <textarea
-                name="bio"
-                value={formData.bio}
-                onChange={handleChange}
-                rows="4"
-                className="w-full px-4 py-3 text-sm text-slate-800 bg-slate-50 border border-slate-200 rounded-xl outline-none transition-all duration-200 focus:bg-white focus:border-[#E23744] focus:ring-4 focus:ring-red-100 resize-none placeholder:text-slate-400"
-                placeholder="Tell something about yourself..."
-              />
-            </div>
-
-            <div>
-              <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+              <label className={labelClass}>
                 <svg
                   className="w-4 h-4 text-[#E23744]"
                   fill="none"
@@ -196,13 +143,13 @@ export const EditProfile = () => {
                 name="role"
                 value={formData.role}
                 onChange={handleChange}
-                className="w-full px-4 py-3 text-sm text-slate-800 bg-slate-50 border border-slate-200 rounded-xl outline-none transition-all duration-200 focus:bg-white focus:border-[#E23744] focus:ring-4 focus:ring-red-100"
+                className={inputClass}
               >
                 <option value="">Select your role</option>
-                <option value="Admin">Admin</option>
-                <option value="User">Customer</option>
-                <option value="Manager">Delivery Patner</option>
-                <option value="Manager">Onwer</option>
+                <option value="ADMIN">Admin</option>
+                <option value="CUSTOMER">Customer</option>
+                <option value="DELIVERY_PARTNER">Delivery Partner</option>
+                <option value="OWNER">Owner</option>
               </select>
             </div>
 
@@ -254,3 +201,5 @@ export const EditProfile = () => {
     </div>
   );
 };
+
+export default EditProfile;

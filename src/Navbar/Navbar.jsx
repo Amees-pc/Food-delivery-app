@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <nav className="gap-6 pb-1 flex items-center pt-3 px-7">
       <div className="navbar-logo" style={{ color: "brown" }}>
-        <p className="mx-4" style={{ fontSize: "34px", fontWeight: "bold" }}>
+        <p className="mx-4 " style={{ fontSize: "34px", fontWeight: "bold", fontStyle:"italic" }}>
           Taaj Food
         </p>
       </div>
@@ -74,12 +74,12 @@ function Navbar() {
         <a href="/Mycart">
           <FaShoppingCart size={26} />
 
-          <FaShoppingCart size={26} />
+          {/* <FaShoppingCart size={26} /> */}
         </a>
 
-        <a href="/myprofile">
+        {/* <a href="/myprofile">
           <FaUserCircle size={33} color="red" />
-        </a>
+        </a> */}
 
         <a href="/profile">
           <FaUserCircle size={33} color="red" />

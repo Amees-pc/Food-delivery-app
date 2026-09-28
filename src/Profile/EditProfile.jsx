@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const inputClass =
@@ -14,7 +14,51 @@ export const EditProfile = () => {
     role: "",
   });
 
+  const [loading, setLoading] = useState(true);
+
   const navigate = useNavigate();
+
+  // Backend se profile data lana
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const token = localStorage.getItem("token");
+
+        const response = await fetch(
+          "https://m3jf8wkn-8080.inc1.devtunnels.ms/user",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+              requestType: "COMPLETE_PROFILE",
+              newRole: "CUSTOMER",
+            }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch profile");
+        }
+
+        const data = await response.json();
+
+        setFormData({
+          name: data.name || "",
+          email: data.email || "",
+          role: data.role || "",
+        });
+      } catch (error) {
+        console.error("Profile fetch error:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProfile();
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -23,17 +67,55 @@ export const EditProfile = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Updated profile:", formData);
+    try {
+      const token = localStorage.getItem("token");
 
-    navigate("/profile");
+      // Role ko backend ko update request mein nahi bhejna
+      const updatedData = {
+        name: formData.name,
+        email: formData.email,
+      };
+
+      console.log("Updated profile:", updatedData);
+
+      // Yahan tumhare backend ka UPDATE PROFILE endpoint aayega
+      /*
+      const response = await fetch("YOUR_UPDATE_PROFILE_API", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(updatedData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to update profile");
+      }
+      */
+
+      navigate("/profile");
+    } catch (error) {
+      console.error("Update profile error:", error);
+    }
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 via-white to-slate-100">
+        <p className="text-slate-600 font-medium">Loading profile...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 via-white to-slate-100 font-sans px-4 py-10">
       <div className="w-full max-w-md overflow-hidden rounded-3xl bg-white shadow-2xl shadow-red-100/60 border border-slate-100">
+
+        {/* Header */}
         <div className="relative h-28 bg-gradient-to-r from-[#E23744] via-[#D92D3A] to-[#B91C2B]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.22),_transparent_40%)]"></div>
 
@@ -63,8 +145,11 @@ export const EditProfile = () => {
           </div>
         </div>
 
+        {/* Form */}
         <div className="p-7">
           <form onSubmit={handleSubmit} className="space-y-5">
+
+            {/* Name */}
             <div>
               <label className={labelClass}>
                 <svg
@@ -93,6 +178,7 @@ export const EditProfile = () => {
               />
             </div>
 
+            {/* Email */}
             <div>
               <label className={labelClass}>
                 <svg
@@ -121,6 +207,7 @@ export const EditProfile = () => {
               />
             </div>
 
+            {/* Role - Read Only */}
             <div>
               <label className={labelClass}>
                 <svg
@@ -139,21 +226,22 @@ export const EditProfile = () => {
                 Role
               </label>
 
-              <select
-                name="role"
+              <input
+                type="text"
                 value={formData.role}
-                onChange={handleChange}
-                className={inputClass}
-              >
-                <option value="">Select your role</option>
-                <option value="ADMIN">Admin</option>
-                <option value="CUSTOMER">Customer</option>
-                <option value="DELIVERY_PARTNER">Delivery Partner</option>
-                <option value="OWNER">Owner</option>
-              </select>
+                readOnly
+                className={`${inputClass} bg-slate-100 cursor-not-allowed`}
+              />
+
+              <p className="text-xs text-slate-400 mt-2">
+                Role can only be changed by the backend.
+              </p>
             </div>
 
+            {/* Buttons */}
             <div className="flex gap-3 pt-2">
+
+              {/* Save */}
               <button
                 type="submit"
                 className="flex-1 flex items-center justify-center gap-2 py-3.5 px-5 bg-[#E23744] text-white text-sm font-semibold rounded-xl shadow-lg shadow-red-200 hover:bg-[#C91F2D] hover:shadow-xl hover:shadow-red-200 hover:-translate-y-0.5 transition-all duration-200"
@@ -174,6 +262,7 @@ export const EditProfile = () => {
                 Save Changes
               </button>
 
+              {/* Cancel */}
               <button
                 type="button"
                 onClick={() => navigate("/profile")}
@@ -194,6 +283,7 @@ export const EditProfile = () => {
                 </svg>
                 Cancel
               </button>
+
             </div>
           </form>
         </div>

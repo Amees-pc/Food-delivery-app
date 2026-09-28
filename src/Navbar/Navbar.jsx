@@ -62,7 +62,7 @@ function Navbar() {
         </a>
       </div>
       <a
-        href="/"
+        href="/login"
         style={{ fontSize: "18px", fontWeight: "bold" }}
         className="bg-red-400 rounded-md px-2 py-2 ml-4 text-white"
       >
@@ -77,9 +77,9 @@ function Navbar() {
           {/* <FaShoppingCart size={26} /> */}
         </a>
 
-        {/* <a href="/myprofile">
+        <a href="/myprofile">
           <FaUserCircle size={33} color="red" />
-        </a> */}
+        </a>
 
         <a href="/profile">
           <FaUserCircle size={33} color="red" />

@@ -10,7 +10,7 @@ function Navbar() {
   console.log(check);
 
   return (
-    <nav className="gap-6 pb-1 flex items-center pt-3 px-7">
+    <nav className="gap-6 pb-1 flex items-center pt-3 px-7 sticky top-0 bg-white">
       <div className="navbar-logo" style={{ color: "brown" }}>
         <p className="mx-4" style={{ fontSize: "34px", fontWeight: "bold" }}>
           Taaj Food

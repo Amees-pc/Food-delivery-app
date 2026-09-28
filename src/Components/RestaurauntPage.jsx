@@ -7,7 +7,7 @@ export const RestaurauntPage = () => {
   return (
     <div className="mr-10 ml-10 mt-2 ">
       <div>
-        <div className="sticky top-0 flex justify-between rounded-md shadow-xl p-8 m-1 z-2 bg-white">
+        <div className=" flex justify-between rounded-md shadow-xl p-8 m-1 z-2 bg-white">
           <div style={{ width: "70%" }}>
             <div className="font-bold text-5xl pb-5">Global-Fussion</div>
 
@@ -130,7 +130,7 @@ export const RestaurauntPage = () => {
             <div className="flex justify-between mb-8">
               <div className="text-4xl">Menu</div>
               <button
-                className="text-xl text-red-300"
+                className="text-xl font-bold text-red-600"
                 onClick={() => {
                   settab("menu");
                 }}
@@ -311,7 +311,7 @@ export const RestaurauntPage = () => {
                 <img
                   src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c"
                   alt=""
-                  className="object-fit h-40 w-full rounded-xl"
+                  className="object-fit h-40 w-full rounded-t-xl"
                 />
               </div>
               <div className="p-2 ">
@@ -337,7 +337,7 @@ export const RestaurauntPage = () => {
                 <img
                   src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002"
                   alt=""
-                  className="object-fit h-40 w-full rounded-xl"
+                  className="object-fit h-40 w-full rounded-t-xl"
                 />
               </div>
               <div className="p-2 ">
@@ -363,7 +363,7 @@ export const RestaurauntPage = () => {
                 <img
                   src="https://crazyaboutpizza.in/pizza/White%20Sauce%20Pasta.jpg"
                   alt=""
-                  className="object-fit h-40 w-full rounded-xl"
+                  className="object-fit h-40 w-full rounded-t-xl"
                 />
               </div>
               <div className="p-2 ">
@@ -391,7 +391,7 @@ export const RestaurauntPage = () => {
                 <img
                   src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c"
                   alt=""
-                  className="object-fit h-40 w-full rounded-xl"
+                  className="object-fit h-40 w-full rounded-t-xl"
                 />
               </div>
               <div className="p-2 pl-3 ">

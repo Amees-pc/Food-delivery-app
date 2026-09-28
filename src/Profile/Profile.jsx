@@ -11,10 +11,10 @@ export const Profile = () => {
     const getProfile = async () => {
       try {
         const token = localStorage.getItem("token");
-        // console.log("PROFILE TOKEN:", token);
+        console.log("TOKEN:", token);
 
         if (!token) {
-          navigate("/login");
+          navigate("/login", { replace: true });
           return;
         }
 
@@ -27,22 +27,29 @@ export const Profile = () => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              requestType: "GET_PROFILE",
+              requestType: "COMPLETE_PROFILE",
+              newRole: "CUSTOMER",
             }),
           },
         );
+
+        // Token expire ho gaya to login par bhejo
+        if (response.status === 401) {
+          localStorage.removeItem("token");
+          localStorage.removeItem("refreshToken");
+          navigate("/login", { replace: true });
+          return;
+        }
 
         if (!response.ok) {
           throw new Error("Failed to get profile");
         }
 
         const data = await response.json();
-
-        // console.log(data);
-
+        console.log("PROFILE RESPONSE:", data);
         setUser(data.user);
       } catch (error) {
-        console.log(error);
+        console.log("Profile Error:", error);
         setError("Unable to load profile");
       }
     };
@@ -52,20 +59,23 @@ export const Profile = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/login");
+    localStorage.removeItem("refreshToken");
+    localStorage.removeItem("userId");
+    localStorage.removeItem("role");
+    navigate("/login", { replace: true });
   };
 
   if (error) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-red-500">{error}</p>
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <p className="text-red-500 font-semibold">{error}</p>
       </div>
     );
   }
 
   if (!user) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <p className="text-lg font-semibold text-[#E23744]">Loading...</p>
       </div>
     );
@@ -74,9 +84,7 @@ export const Profile = () => {
   return (
     <div
       className="min-h-screen flex items-center justify-center relative font-sans px-4 py-10 pt-28 bg-cover bg-center bg-fixed"
-      style={{
-        backgroundImage: "url('/profileImage.png')",
-      }}
+      style={{ backgroundImage: "url('/profileImage.png')" }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
 
@@ -91,20 +99,19 @@ export const Profile = () => {
               <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#E23744] to-[#991B1B] p-1 shadow-lg">
                 <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
                   <div className="w-[90%] h-[90%] rounded-full bg-[#1F1F1F] text-white flex items-center justify-center text-3xl font-bold">
-                    {user.name?.charAt(0).toUpperCase()}
+                    {user.name?.charAt(0).toUpperCase() || "U"}
                   </div>
                 </div>
               </div>
-
-              <div className="absolute bottom-1 right-1 w-4 h-4 bg-[#22C55E] border-3 border-white rounded-full"></div>
+              <div className="absolute bottom-1 right-1 w-4 h-4 bg-[#22C55E] border-2 border-white rounded-full"></div>
             </div>
 
             <h2 className="text-xl font-bold mt-3 text-[#1F1F1F]">
-              {user.name}
+              {user.name || "User"}
             </h2>
 
             <div className="flex items-center gap-2 mt-1 text-xs text-slate-500">
-              <span>{user.email}</span>
+              <span>{user.email || "No email"}</span>
             </div>
           </div>
 
@@ -113,14 +120,12 @@ export const Profile = () => {
               <div className="w-9 h-9 rounded-lg bg-[#E23744] text-white flex items-center justify-center">
                 👤
               </div>
-
               <div className="min-w-0">
                 <p className="text-[10px] font-semibold text-[#E23744] uppercase tracking-wider">
                   Name
                 </p>
-
                 <p className="text-sm font-semibold text-[#1F1F1F] truncate">
-                  {user.name}
+                  {user.name || "Not added"}
                 </p>
               </div>
             </div>
@@ -129,69 +134,33 @@ export const Profile = () => {
               <div className="w-9 h-9 rounded-lg bg-[#1F1F1F] text-white flex items-center justify-center">
                 ✉️
               </div>
-
               <div className="min-w-0">
                 <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
                   Email
                 </p>
-
                 <p className="text-sm font-semibold text-[#1F1F1F] truncate">
-                  {user.email}
+                  {user.email || "Not added"}
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
               <div className="w-9 h-9 rounded-lg bg-[#E23744] text-white flex items-center justify-center">
-                📞
+                🛡️
               </div>
-
-              <div className="min-w-0">
-                <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
-                  Phone
-                </p>
-
-                <p className="text-sm font-semibold text-[#1F1F1F]">
-                  {user.phone}
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
-              <div className="w-9 h-9 rounded-lg bg-[#1F1F1F] text-white flex items-center justify-center">
-                💬
-              </div>
-
-              <div className="min-w-0">
-                <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
-                  Bio
-                </p>
-
-                <p className="text-sm font-semibold text-[#1F1F1F] leading-relaxed">
-                  {user.bio}
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
-              <div className="w-9 h-9 rounded-lg bg-[#E23744] text-white flex items-center justify-center">
-                👤
-              </div>
-
               <div className="min-w-0">
                 <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
                   Role
                 </p>
-
                 <p className="text-sm font-semibold text-[#1F1F1F]">
-                  {user.role}
+                  {user.role || "CUSTOMER"}
                 </p>
               </div>
             </div>
           </div>
 
           <Link
-            to="/profile/edit/"
+            to={`/profile/edit/${user.id}`}
             className="mt-5 flex items-center justify-center w-full py-3 px-4 bg-[#E23744] hover:bg-[#C91F2D] text-white text-sm font-semibold rounded-xl transition"
           >
             Edit Profile

@@ -12,17 +12,19 @@ export const Login = () => {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const token = params.get("accessToken");
-    const refreshToken = params.get("refreshToken");
-    const userId = params.get("userId");
-    const role = params.get("role");
 
     if (token) {
       localStorage.setItem("token", token);
+
+      const refreshToken = params.get("refreshToken");
+      const userId = params.get("userId");
+      const role = params.get("role");
+
       if (refreshToken) localStorage.setItem("refreshToken", refreshToken);
       if (userId) localStorage.setItem("userId", userId);
       if (role) localStorage.setItem("role", role);
 
-      navigate("/home", { replace: true });
+      navigate("/", { replace: true });
     }
   }, [navigate]);
 
@@ -42,7 +44,10 @@ export const Login = () => {
         <div className="w-full px-6 pt-10 pb-12 sm:px-10 md:px-14 lg:px-20">
           <div className="flex flex-col gap-4">
             <div className="max-w-lg flex flex-col items-start text-left gap-6">
-              <p className="font-['Fraunces',_serif] italic text-[#D9B168] text-base sm:text-lg drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
+              <p
+                className="font-['Fraunces',_serif] italic text-[#D9B168] text-base sm:text-lg drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]"
+                style={{ fontSize: "25px" }}
+              >
                 Where every meal tells a story
               </p>
 
@@ -55,9 +60,9 @@ export const Login = () => {
                     Taaj Restaurant & food Delivery!
                   </span>
                 </h1>
-                <p className="font-['Manrope',_sans-serif] mt-4 text-[#F0E7D6] text-sm sm:text-base max-w-sm leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
+                <p className="font-['Manrope',_sans-serif] italic mt-4 text-[#F0E7D6] text-sm sm:text-base max-w-sm leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
                   Slow-cooked Mughlai classics, warm hospitality, and a table
-                  that's always waiting for you.
+                  that's always waiting for you... !
                 </p>
               </div>
             </div>
@@ -68,7 +73,6 @@ export const Login = () => {
                   <div className="h-[3px] w-full bg-[#C89B3C]"></div>
 
                   <div className="px-7 py-8 sm:px-8 sm:py-9">
-                    {/* Icon */}
                     <div className="mb-6 flex justify-center">
                       <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#6B1E23]/20 bg-[#6B1E23]">
                         <svg

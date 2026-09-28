@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <nav className="gap-6 pb-1 flex items-center pt-3 px-7 sticky top-0 bg-white">
       <div className="navbar-logo" style={{ color: "brown" }}>
-        <p className="mx-4" style={{ fontSize: "34px", fontWeight: "bold" }}>
+        <p className="mx-4 " style={{ fontSize: "34px", fontWeight: "bold", fontStyle:"italic" }}>
           Taaj Food
         </p>
       </div>
@@ -26,7 +26,8 @@ function Navbar() {
 
       <div className="flex gap-7">
         <a
-          href="/home"
+          href="/
+          "
           className={`${loc.pathname == "/home" ? "border-b-2 border-red-400 text-red-400" : "none"}`}
           style={{ color: "brown", fontSize: "18px", fontWeight: "bold" }}
         >
@@ -62,7 +63,7 @@ function Navbar() {
         </a>
       </div>
       <a
-        href="/"
+        href="/login"
         style={{ fontSize: "18px", fontWeight: "bold" }}
         className="bg-red-400 rounded-md px-2 py-2 ml-4 text-white"
       >
@@ -74,7 +75,7 @@ function Navbar() {
         <a href="/Mycart">
           <FaShoppingCart size={26} />
 
-          <FaShoppingCart size={26} />
+          {/* <FaShoppingCart size={26} /> */}
         </a>
 
         <a href="/myprofile">
